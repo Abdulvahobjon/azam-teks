@@ -1204,9 +1204,14 @@ img {
   border-top: 1px dashed #e4e4e4;
 }
 
+.certificat_image{
+  width: 400px;
+  /* height: ; */
+}
+
 .blog-sidebar .recent-post-widget .post .img-holder {
   width: 68px;
-  float: left;
+  /* float: left; */
 }
 
 .blog-sidebar .recent-post-widget .post .img-holder img {
@@ -2571,11 +2576,11 @@ img {
   text-align: left;
 }
 
-.slide-inner{
+.slide-inner {
   z-index: 15;
 }
 
-.swiper-slide-bg-gray{
+.swiper-slide-bg-gray {
   position: absolute !important;
   z-index: 10;
   height: 100%;
@@ -2935,7 +2940,7 @@ img {
 }
 
 .site-footer .widget-title h3 {
-  font-size: 22px;
+  font-size: 20px;
   font-size: 1.46667rem;
   font-weight: 500;
   color: #fff;
@@ -2975,7 +2980,7 @@ img {
 }
 
 .site-footer .about-widget .logo {
-  max-width: 180px;
+  max-width: 250px;
 }
 
 .site-footer .about-widget p {
@@ -3680,13 +3685,13 @@ img {
   }
 }
 
-.product-img-holder{
+.product-img-holder {
   width: 330px;
   height: 350px;
   margin-bottom: 5px;
 }
 
-.product-img-holder img{
+.product-img-holder img {
   width: 100%;
   height: 100%;
 }
@@ -4300,6 +4305,13 @@ img {
 --------------------------------------------------------------*/
 .team-section {
   padding-bottom: 60px;
+}
+
+.flex{
+  display: flex !important;
+  justify-content: center !important;
+  gap: 30px ;
+  /* background: #000; */
 }
 
 @media (max-width: 991px) {
@@ -7263,6 +7275,14 @@ img {
     margin: 0 0 45px 0;
   }
 }
+
+@media (max-width: 400px) {
+  .product-img-holder {
+    width: 100%;
+    height: 300px;
+  }
+}
+
 
 .service-single-section .service-single-content ul {
   margin-bottom: 30px;
