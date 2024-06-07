@@ -35,6 +35,12 @@
 
     function getCurrentYear() {
         document.querySelector(".current_year").textContent = new Date().getFullYear();
+        const experianse = document.querySelector("#experianse")
+
+        if (experianse) {
+            experianse.textContent = new Date().getFullYear() - 2009
+        }
+
     }
     getCurrentYear()
 
