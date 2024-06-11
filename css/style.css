@@ -1024,7 +1024,7 @@ img {
 .social_link a {
   height: 100%;
   display: flex !important;
-  align-items: center ;
+  align-items: center;
   justify-content: center;
 }
 
@@ -3069,7 +3069,7 @@ img {
   overflow: hidden
 }
 
-.img-holder{
+.img-holder {
   overflow: hidden
 }
 
@@ -5790,3 +5790,31 @@ img {
 .error-404-section .error-message p {
   margin-bottom: 1.8em
 }
+
+.maps-fullscreen{
+  height: 700px;
+}
+
+
+@media (max-width:991px) {
+  .maps-fullscreen {
+    height: 350px;
+  }
+}
+
+
+
+@media (max-width:530) {
+  .maps-fullscreen {
+    height: 200px;
+  }
+} 
+
+
+
+
+@media (max-width:400) {
+  .maps-fullscreen {
+    height: 200px;
+  }
+} 
