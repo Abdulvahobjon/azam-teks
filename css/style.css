@@ -2334,10 +2334,16 @@ img {
 
 @media (max-width:991px) {
   .hero-slider .slide-btns {
-    margin: 0 auto;
-    text-align: center
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 20px 0;
   }
-
+  .theme-btn, .theme-btn-s2{
+    margin: 0;
+    width: 200px;
+  }
   .hero-style-1,
   .hero-style-2,
   .hero-style-3 {
