@@ -615,6 +615,13 @@ img {
   padding-left: 15px
 }
 
+
+.card_wrapper span{
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 .page-title .breadcrumb>li+li:before {
   font-family: Flaticon;
   content: "\f103";
@@ -1900,13 +1907,23 @@ img {
   gap: 10px
 }
 
+@font-face {
+  font-family: 'Times New Roman'; /* Name of the font */
+  src: url('../fonts/ofont.ru_Times\ New\ Roman.ttf') format('truetype'); /* Path to the font file */
+  font-weight: bold; /* Specify font weight if needed */
+  font-style: normal; /* Specify font style if needed */
+}
+
+
 .navbar-brand h2 {
   display: flex;
   margin-bottom: 20px;
   font-size: 30px;
   color: #0B1726;
-  font-weight: 800;
+  font-family: 'Times New Roman', serif; /* Times New Roman Bold */
+  font-weight: bold; /* Ensure bold font weight */
 }
+
 
 .header-style-1 .navbar-brand,
 .header-style-2 .navbar-brand {
