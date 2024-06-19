@@ -616,11 +616,6 @@ img {
 }
 
 
-.card_wrapper span{
-  color: #000;
-  font-size: 18px;
-  font-weight: 700;
-}
 
 .page-title .breadcrumb>li+li:before {
   font-family: Flaticon;
@@ -1908,10 +1903,14 @@ img {
 }
 
 @font-face {
-  font-family: 'Times New Roman'; /* Name of the font */
-  src: url('../fonts/ofont.ru_Times\ New\ Roman.ttf') format('truetype'); /* Path to the font file */
-  font-weight: bold; /* Specify font weight if needed */
-  font-style: normal; /* Specify font style if needed */
+  font-family: 'Times New Roman';
+  /* Name of the font */
+  src: url('../fonts/ofont.ru_Times\ New\ Roman.ttf') format('truetype');
+  /* Path to the font file */
+  font-weight: bold;
+  /* Specify font weight if needed */
+  font-style: normal;
+  /* Specify font style if needed */
 }
 
 
@@ -1920,8 +1919,10 @@ img {
   margin-bottom: 20px;
   font-size: 30px;
   color: #0B1726;
-  font-family: 'Times New Roman', serif; /* Times New Roman Bold */
-  font-weight: bold; /* Ensure bold font weight */
+  font-family: 'Times New Roman', serif;
+  /* Times New Roman Bold */
+  font-weight: bold;
+  /* Ensure bold font weight */
 }
 
 
@@ -3095,16 +3096,60 @@ img {
   /* overflow: hidden; */
 }
 
-.img-holder h2{
-  color: #000;
+.project {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  transition: all .35s ease-out;
+}
+
+.project .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 20, 51, .8);
+  transition: all .35s ease-out;
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+}
+
+.project:hover .overlay {
+  opacity: 1;
+}
+
+.card_wrapper h4, .card_wrapper h2{
+  color: #fff;
+  font-size: 22px;
+}
+
+.project:hover img {
+  transition: all .35s ease-out;
+  transform: scale(1.2);
+}
+
+.project img {
+  transition: all .35s ease-out;
+  height: 400px;
+  width: 100%;
+  transform: scale(1);
 }
 
 .img-holder {
-  overflow: hidden
+  overflow: hidden;
+  position: relative;
 }
 
 .product-img-holder img:hover {
-  scale: 110%
+  background-color: #000000;
+  scale: 110%;
+  width: 100%;
+  height: 100%;
 }
 
 
