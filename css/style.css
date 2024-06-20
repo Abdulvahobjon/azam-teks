@@ -1150,6 +1150,35 @@ img {
   border-color: #ff5e14
 }
 
+
+#language {
+  background-color: #ff5e14; /* Set background color */
+  color: white; /* Text color */
+  padding: 8px; /* Adjust padding for better appearance */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Optional: Add border radius for rounded corners */
+  font-size: 16px; /* Adjust font size */
+  display: inline-block;
+}
+
+.flexx{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+
+#message {
+  display: block;
+  width: 100%;
+  border-color: #c3e6cb;
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+
 .pagination-wrapper {
   text-align: center;
   margin-top: 60px

@@ -544,57 +544,86 @@
     /*------------------------------------------
         = CONTACT FORM SUBMISSION
     -------------------------------------------*/
-    if ($("#contact-form-main").length) {
-        $("#contact-form-main").validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 2
-                },
-
-                email: "required",
-
-                phone: "required",
-
-                subject: {
-                    required: true
-                }
-
-            },
-
-            messages: {
-                name: "Please enter your name",
-                email: "Please enter your email address",
-                phone: "Please enter your phone number",
-                subject: "Please select your contact subject"
-            },
-
-            submitHandler: function (form) {
-                $.ajax({
-                    type: "POST",
-                    url: "mail-contact.php",
-                    data: $(form).serialize(),
-                    success: function () {
-                        $("#loader").hide();
-                        $("#success").slideDown("slow");
-                        setTimeout(function () {
-                            $("#success").slideUp("slow");
-                        }, 3000);
-                        form.reset();
+    $(document).ready(function () {
+        if ($("#contact-form-main").length) {
+            $("#contact-form-main").validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 2
                     },
-                    error: function () {
-                        $("#loader").hide();
-                        $("#error").slideDown("slow");
-                        setTimeout(function () {
-                            $("#error").slideUp("slow");
-                        }, 3000);
-                    }
-                });
-                return false; // required to block normal submit since you used ajax
-            }
+                    email: "required",
+                    phone: "required",
+                    subject: "required"
+                },
+                messages: {
+                    name: "Iltimos, ismingizni kiriting",
+                    email: "Iltimos, email manzilingizni kiriting",
+                    phone: "Iltimos, telefon raqamingizni kiriting",
+                    subject: "Please select your contact subject"
+                },
+                submitHandler: function (form) {
+                    // Serialize form data
+                    var formData = $(form).serialize();
+    
+                    // Ajax submission
+                    handleTelegramIntegration(formData);
+                    
+                    // Reset form after successful submission
+                    $(form)[0].reset();
+    
+                    return false; // Prevent the form from submitting normally
+                }
+            });
+        }
+    });    
+    
+    function handleTelegramIntegration(formData) {
+        var telegram_bot_id = "7378527420:AAHmzqaGDy1zDt9Q43Efys7F0Uq8kvFw9WE"; // Replace with your Telegram bot ID
+        var chat_id = "5824904653"; // Replace with your chat ID
+        // 5824904653
+        
+        // Parse formData into key-value pairs
+        var formDataArray = formData.split("&");
+        var formDataObject = {};
+        
+        formDataArray.forEach(function(keyValue) {
+            var pair = keyValue.split("=");
+            formDataObject[pair[0]] = decodeURIComponent(pair[1]);
+        });
+        
+        // Construct a readable message
+        var message = "Malumotlar:\n\n" +
+                      "Foydalanuvchi ismi: " + formDataObject.name + "\n" +
+                      "Foydalanuvchi telefon raqami: " + formDataObject.phone + "\n" +
+                      "Foydalanuvchi yozgan habar: " + formDataObject.note; // Adjust as per your form fields
+        
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+            "method": "POST",
+            "headers": {
+                "Content-Type": "application/json",
+                "cache-control": "no-cache"
+            },
+            "data": JSON.stringify({
+                "chat_id": chat_id,
+                "text": message
+            })
+        };
+        
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            document.querySelector("#message").textContent = "Malumot yuborildi, tez orada sizga aloqaga chiqishadi"
 
+            setTimeout(() => {
+                document.querySelector("#message").textContent = ""
+            }, 3000);
         });
     }
+    
+    
 
 
 
