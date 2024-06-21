@@ -1152,16 +1152,22 @@ img {
 
 
 #language {
-  background-color: #ff5e14; /* Set background color */
-  color: white; /* Text color */
-  padding: 8px; /* Adjust padding for better appearance */
-  border: none; /* Remove default border */
-  border-radius: 4px; /* Optional: Add border radius for rounded corners */
-  font-size: 16px; /* Adjust font size */
+  background-color: #ff5e14;
+  /* Set background color */
+  color: white;
+  /* Text color */
+  padding: 8px;
+  /* Adjust padding for better appearance */
+  border: none;
+  /* Remove default border */
+  border-radius: 4px;
+  /* Optional: Add border radius for rounded corners */
+  font-size: 16px;
+  /* Adjust font size */
   display: inline-block;
 }
 
-.flexx{
+.flexx {
   display: flex;
   align-items: center;
   gap: 50px;
@@ -1980,6 +1986,16 @@ img {
   .header-style-2 .search-contact {
     display: none
   }
+
+  .navbar-brand img {
+    width: 50px !important;
+    height: 50px !important;
+    margin-top: 15px;
+  }
+  .navbar-brand h2 {
+    font-size: 20px !important;
+    margin-bottom: 3px;
+  }
 }
 
 .header-style-1 .search-contact button,
@@ -2328,7 +2344,7 @@ img {
   max-width: 600px
 }
 
-.hero-slider_ru{
+.hero-slider_ru {
   font-size: 60px !important;
 }
 
@@ -2352,7 +2368,8 @@ img {
   .hero-slider .slide-title h2 {
     font-size: 3.33333rem
   }
-  .hero-slider_ru{
+
+  .hero-slider_ru {
     font-size: 2.33333rem !important;
   }
 
@@ -2827,7 +2844,7 @@ img {
 
 .features-section .feature-grids .grid,
 .features-section-s2 .feature-grids .grid {
-  width: 25%;
+  width: 33.333333333%;
   float: left;
   border-right: 1px solid #dce7eb;
   padding: 50px 25px
@@ -3129,7 +3146,7 @@ img {
   width: 330px;
   height: 400px;
   margin-bottom: 5px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .project {
@@ -3137,36 +3154,38 @@ img {
   z-index: 2;
   overflow: hidden;
   transition: all .35s ease-out;
+  border: 4px solid rgba(255, 255, 255, 0.8);
 }
 
 .project .overlay {
   position: absolute;
-  top: 0;
+  /* top: 0; */
   left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(21, 20, 51, .8);
+  height: 10%;
+  background-color: rgba(255, 255, 255, 0.8);
   transition: all .35s ease-out;
   opacity: 0;
   display: flex;
   align-items: flex-end;
-  padding: 15px;
+  padding: 0 10px;
 }
 
-.project:hover .overlay {
+.project .overlay {
   opacity: 1;
 }
 
-.card_wrapper h4, .card_wrapper h2{
-  color: #fff;
-  font-size: 22px;
+.card_wrapper h4,
+.card_wrapper h2 {
+  color: #000000;
+  font-size: 20px;
 }
 
 .project:hover img {
   transition: all .35s ease-out;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .project img {
