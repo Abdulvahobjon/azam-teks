@@ -2328,6 +2328,10 @@ img {
   max-width: 600px
 }
 
+.hero-slider_ru{
+  font-size: 60px !important;
+}
+
 .hero-slider .slide-title h2 {
   font-size: 70px;
   color: #fff;
@@ -2347,6 +2351,9 @@ img {
 
   .hero-slider .slide-title h2 {
     font-size: 3.33333rem
+  }
+  .hero-slider_ru{
+    font-size: 2.33333rem !important;
   }
 
   .hero-slider .slide-text {
