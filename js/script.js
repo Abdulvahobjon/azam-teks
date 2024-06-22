@@ -651,6 +651,7 @@
 
         if ($(".site-header").length) {
             stickyMenu($('.site-header .navigation'), "sticky-on");
+
         }
 
     });
@@ -687,10 +688,18 @@ $(document).ready(function() {
 
     // Set the selected option based on the current URL
     const currentLanguage = getCurrentLanguage();
-    $('#language-select').val(currentLanguage);
+    $('.language-select').val(currentLanguage);
+    document.querySelectorAll("option").forEach(e => {
+        if (e.value === currentLanguage) {
+                    e.selected = true;
+                } else {
+                    e.selected = false;
+                }
+    })
+
 
     // Add event listener for language selection change
-    $('#language-select').on('change', function() {
+    $('.language-select').on('change', function() {
         const selectedValue = $(this).val();
         if (selectedValue === 'uz') {
             window.location.href = '/';
@@ -701,55 +710,43 @@ $(document).ready(function() {
 });
 
 
-// const userData = await req.json();
-//     // const botApiUrl = `https://api.telegram.org/bots${process.env.TELEGRAM_BOT_TOKEN}/${""}`
-
-//     if (userData.firstName && userData.lastName && userData.phone && userData.message) {
-//         const myChatId = "1802639780"
-//         const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN)
-
-
-//         bot.start((ctx) => {
-//             ctx.reply('Assalomu alaykum bizning websit: http://mayoq.uz');
-//         });
-
-//         // Botning asosiy qismi 
-
-//         // Bot foydalanuvchilarning xabarlari ustida ishlaydi
-//         bot.on('message', async (ctx) => {
-//             // Check if the message contains the text property
-//             if ('text' in ctx.message) {
-//                 const message = ctx.message.text.toLowerCase(); // Foydalanuvchi xabarni kichik harflarga o'tkazamiz
-//                 if (message !== "/start") {
-//                     ctx.reply("Siz tasodifiy belgilar qatorini kiritganga o'xshaysiz. Hamma malumotni bizni vebsaytdan olishingiz mumkin: http://mayoq.uz");
-//                 }
-//             }
-//         });
-
-
-
-//         bot.telegram.sendMessage(myChatId, `
-//             Name: ${userData.firstName} ${userData.lastName}
-//             _______________________
-//             Phone: ${userData.phone}
-//             _______________________
-//             Message: ${userData.message}
-//         `);
-
-
-
-//         // Botni ishga tushirish
-//         bot.launch();
-
-        
-//         return NextResponse.json({
-//             status: 200,
-//             message: "success",
-//             data: userData,
-//         });
-//     } else {
-//         return NextResponse.json({
-//             status: 400,
-//             message: "Malumotni toliq kiriting",
-//         });
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Function to get the current language from the URL
+//     function getCurrentLanguage() {
+//         const path = window.location.pathname;
+//         if (path.includes("/ru")) {
+//             return 'ru';
+//         } else if (path.includes("/eng")) {
+//             return 'eng';
+//         } else {
+//             return 'uz';
+//         }
 //     }
+
+//     // Set the selected option based on the current URL
+//     const currentLanguage = getCurrentLanguage();
+//     const languageSelect = document.querySelector('.language-select');
+    
+//     // Set the value of the select element
+//     languageSelect.value = currentLanguage;
+
+//     // Loop through options and set selected attribute
+//     const options = languageSelect.querySelectorAll('option');
+//     options.forEach(option => {
+//         if (option.value === currentLanguage) {
+//             option.selected = true;
+//         } else {
+//             option.selected = false;
+//         }
+//     });
+
+//     // Add event listener for language selection change
+//     languageSelect.addEventListener('change', function() {
+//         const selectedValue = this.value;
+//         if (selectedValue === 'uz') {
+//             window.location.href = '/';
+//         } else {
+//             window.location.href = '/' + selectedValue;
+//         }
+//     });
+// });
