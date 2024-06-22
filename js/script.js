@@ -672,6 +672,33 @@
 
 })(window.jQuery);
 
+$(document).ready(function() {
+    // Function to get the current language from the URL
+    function getCurrentLanguage() {
+        const path = window.location.pathname;
+        if (path.includes("/ru")) {
+            return 'ru';
+        }else if (path.includes("/eng")) {
+            return 'eng';
+        } else {
+            return 'uz';
+        }
+    }
+
+    // Set the selected option based on the current URL
+    const currentLanguage = getCurrentLanguage();
+    $('#language-select').val(currentLanguage);
+
+    // Add event listener for language selection change
+    $('#language-select').on('change', function() {
+        const selectedValue = $(this).val();
+        if (selectedValue === 'uz') {
+            window.location.href = '/';
+        } else {
+            window.location.href = '/' + selectedValue;
+        }
+    });
+});
 
 
 // const userData = await req.json();
