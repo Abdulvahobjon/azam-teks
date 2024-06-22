@@ -127,7 +127,7 @@ select {
   color: #fff;
   font-size: 18px;
   font-weight: 400;
-  /* outline: none; */
+  outline: none;
   /* -webkit-appearance: none; */
   /* -moz-appearance: none; */
   /* appearance: none; */
