@@ -1,0 +1,216 @@
+/* ========================================
+   Footer - Premium Corporate Design
+   ======================================== */
+
+.footer {
+  background: linear-gradient(135deg, var(--brand-dark) 0%, rgb(5, 20, 50) 100%);
+  color: #ffffff;
+  padding: 60px 8% 30px;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brand-primary), transparent);
+  opacity: 0.3;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.footer-section.contact{
+	display: block;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.contact span,
+.contact a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  transition: all var(--transition-base);
+  margin-bottom: 10px;
+}
+
+.contact span:hover,
+.contact a:hover {
+  color: var(--brand-primary);
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+.contact svg {
+  font-size: 14px;
+}
+.footer-section {
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 24px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer-section h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--brand-primary);
+  border-radius: 2px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all var(--transition-base);
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 0;
+}
+
+.footer-section ul li a:hover {
+  color: var(--brand-primary);
+  transform: translateX(6px);
+}
+
+.footer-section.contact p {
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  font-size: 24px;
+  transition: all var(--transition-base);
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icons a:hover {
+  color: var(--brand-primary);
+  background: rgba(255, 94, 20, 0.15);
+  border-color: rgba(255, 94, 20, 0.3);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 94, 20, 0.2);
+}
+
+.footer-bottom {
+  margin-top: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+}
+
+.footer-policy {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.footer-policy a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all var(--transition-base);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.footer-policy a:hover {
+  color: var(--brand-primary);
+  background: rgba(255, 94, 20, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 5% 24px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-section {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding-top: 24px;
+  }
+
+  .footer-policy {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+  }
+}

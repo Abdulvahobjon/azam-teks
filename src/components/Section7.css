@@ -1,0 +1,132 @@
+.why-section {
+  width: 100%;
+  padding: 80px 20px;
+  background: var(--bg-white);
+  font-family: 'Inter', sans-serif;
+}
+
+.why-container {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.why-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+  color: var(--brand-dark);
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all var(--transition-slow);
+}
+
+.why-text.visible {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.why-text h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: 16px;
+  color: var(--brand-dark);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.why-text h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  margin-bottom: 24px;
+  color: var(--brand-primary);
+  font-weight: 600;
+}
+
+.why-text p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.6s ease forwards;
+  animation-delay: 0.3s;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-secondary);
+}
+
+.why-image {
+  flex: 1 1 400px;
+  max-width: 400px;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all var(--transition-slow);
+}
+
+.why-image.visible {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.why-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(2, 13, 38, 0.15);
+  transition: all var(--transition-base);
+  border: 1px solid var(--border-light);
+}
+
+.why-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 16px 48px rgba(2, 13, 38, 0.2);
+}
+
+/* Animatsiyalar */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobil uchun */
+@media (max-width: 768px) {
+  .why-container {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .why-text, .why-image {
+    max-width: 100%;
+  }
+}

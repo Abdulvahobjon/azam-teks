@@ -1,0 +1,342 @@
+/* ========================================
+   Contact Form - Premium Modal Design
+   ======================================== */
+
+/* ================= OVERLAY ================= */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  background: rgba(2, 13, 38, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.overlay.show {
+  opacity: 1;
+}
+
+/* ================= MODAL ================= */
+.formMessage {
+  background: var(--bg-white);
+  width: 100%;
+  max-width: 500px;
+  padding: 40px 32px;
+  border-radius: 24px;
+  position: relative;
+  margin: auto;
+  transform: translateY(30px) scale(0.95);
+  opacity: 0;
+  animation: popUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  box-shadow: 0 24px 64px rgba(2, 13, 38, 0.4);
+  font-family: 'Inter', sans-serif;
+  border: 1px solid rgba(255, 94, 20, 0.15);
+  box-sizing: border-box;
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+}
+
+.formMessage.show {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.formMessage h3 {
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--brand-dark);
+  letter-spacing: -0.02em;
+}
+
+/* ================= CLOSE BUTTON ================= */
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background: rgba(2, 13, 38, 0.05);
+  font-size: 22px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all var(--transition-base);
+  padding: 0;
+}
+
+.close-btn:hover {
+  background: rgba(255, 94, 20, 0.1);
+  color: var(--brand-primary);
+  transform: rotate(90deg);
+}
+
+.nav-btn {
+  width: auto;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: 2px solid var(--brand-dark);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  background: var(--brand-dark);
+  transition: all var(--transition-base);
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.nav-btn:hover {
+  background: var(--brand-primary);
+  color: #fff;
+  border-color: var(--brand-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 94, 20, 0.3);
+}
+
+.nav-btn:active {
+  transform: translateY(0);
+}
+
+/* Floating bot style for mobile */
+@media (max-width: 768px) {
+  .nav-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 998;
+    box-shadow: 0 8px 24px rgba(2, 13, 38, 0.4);
+    border-radius: 50px;
+    padding: 16px 28px;
+    font-size: 14px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      box-shadow: 0 8px 24px rgba(2, 13, 38, 0.4);
+    }
+    50% {
+      box-shadow: 0 8px 24px rgba(255, 94, 20, 0.5), 0 0 0 8px rgba(255, 94, 20, 0.1);
+    }
+  }
+}
+
+/* ================= INPUTS & TEXTAREA ================= */
+.formMessage input,
+.formMessage textarea,
+.formMessage select {
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border-light);
+  outline: none;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-white);
+  color: var(--text-primary);
+  transition: all var(--transition-base);
+}
+
+.formMessage input::placeholder,
+.formMessage textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+.formMessage textarea {
+  resize: none;
+  height: 100px;
+  font-family: 'Inter', sans-serif;
+}
+
+.formMessage input:focus,
+.formMessage textarea:focus,
+.formMessage select:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px rgba(255, 94, 20, 0.1);
+  background: var(--bg-white);
+}
+
+[data-theme="dark"] .formMessage input:focus,
+[data-theme="dark"] .formMessage textarea:focus,
+[data-theme="dark"] .formMessage select:focus {
+  background: var(--bg-light);
+}
+
+.formMessage input:hover,
+.formMessage textarea:hover,
+.formMessage select:hover {
+  border-color: rgba(2, 13, 38, 0.2);
+}
+
+/* ================= SUBMIT BUTTON ================= */
+.submit-btn {
+  margin-top: 24px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand-primary), #ff7a3d);
+  transition: all var(--transition-base);
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 12px rgba(255, 94, 20, 0.25);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 94, 20, 0.35);
+  filter: brightness(1.05);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.92) translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .overlay {
+    padding: 16px;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  .formMessage {
+    width: 100%;
+    max-width: 100%;
+    padding: 28px 24px;
+    border-radius: 20px;
+    margin: 0;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .formMessage h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .formMessage input,
+  .formMessage textarea,
+  .formMessage select {
+    padding: 14px 16px;
+    font-size: 16px;
+    margin-top: 14px;
+  }
+
+  .formMessage textarea {
+    height: 120px;
+    resize: vertical;
+  }
+
+  .submit-btn {
+    padding: 16px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .close-btn {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    top: 12px;
+    right: 12px;
+  }
+
+  .nav-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 998;
+    box-shadow: 0 8px 24px rgba(2, 13, 38, 0.4);
+    border-radius: 50px;
+    padding: 16px 28px;
+    font-size: 14px;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay {
+    padding: 12px;
+    padding-top: 20px;
+  }
+
+  .formMessage {
+    padding: 24px 20px;
+    border-radius: 16px;
+    max-height: calc(100vh - 40px);
+  }
+
+  .formMessage h3 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .formMessage input,
+  .formMessage textarea,
+  .formMessage select {
+    padding: 12px 14px;
+    font-size: 15px;
+    margin-top: 12px;
+  }
+
+  .submit-btn {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .close-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .nav-btn {
+    bottom: 16px;
+    right: 16px;
+    padding: 14px 24px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,139 @@
+.projects-section {
+  width: 100%;
+  padding: 80px 20px;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  background: var(--bg-white);
+}
+
+.services-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    padding: 0 1rem;
+  }
+}
+
+.projects-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--brand-dark);
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.projects-section h3 {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 50px;
+}
+.class{
+  color: var(--brand-primary) !important; 
+}
+/* Services grid bilan bir xil */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+/* CARD */
+.service-card {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 24px rgba(2, 13, 38, 0.08);
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: all var(--transition-base);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card-inner {
+  padding: 25px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Rasm kattaroq va hover zoom */
+.service-card img {
+  width: 100%;
+  height: 300px; /* height kattaroq qilindi */
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.1); /* rasm zoom */
+}
+
+.service-card:hover {
+  border-color: rgba(255, 94, 20, 0.3);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(2, 13, 38, 0.2);
+}
+
+.service-card:hover .card-inner {
+  transform: scale(1.03);
+  box-shadow: 0 16px 40px rgba(2, 13, 38, 0.15);
+}
+
+/* Title kattaroq */
+.service-card h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--brand-dark);
+  margin: 0;
+  transition: color var(--transition-base);
+}
+
+.service-card:hover h4 {
+  color: var(--brand-primary);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service-card img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card img {
+    height: 240px;
+  }
+}
