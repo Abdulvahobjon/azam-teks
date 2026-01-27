@@ -178,7 +178,7 @@ a {
 }
 
 /* Scrollbar Styling (Webkit browsers) */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
 }
 
@@ -193,7 +193,7 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #e04f0f;
-}
+} */
 
 /* Selection Styling */
 ::selection {

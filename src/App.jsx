@@ -1,23 +1,18 @@
-import { Route, Routes, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
-import Navbar from './components/Navbar'
-import Boshsahifa from './components/Boshsahifa.jsx'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import Bizhaqimizda from './components/Bizhaqimizda.jsx'
-import Xizmatlar from './components/Xizmatlar.jsx'
-import Loyihalar from './components/Loyihalar.jsx'
 import Boglanish from './components/Boglanish.jsx'
-import Mijozlarfikri from './components/Mijozlarfikri.jsx'
-// import Section1 from './components/Section1.jsx'
-import Section2 from './components/Section2.jsx'
-import Section3 from './components/Section3.jsx'
-import Section4 from './components/Section4.jsx'
-import Section5 from './components/Section5.jsx'
-import Section6 from './components/Section6.jsx'
-import Section7 from './components/Section7.jsx'
-import Footer from './components/Footer.jsx'
+import Boshsahifa from './components/Boshsahifa.jsx'
+import Loyihalar from './components/Loyihalar.jsx'
+import Navbar from './components/Navbar'
+import Xizmatlar from './components/Xizmatlar.jsx'
+import Section1 from './components/Section1.jsx'
 import Loader from './components/Loader.jsx'
-
 import SingleCard from "./components/SingleCard.jsx"
+import SingleCard2 from "./components/SingleCard2.jsx"
+import MijozlarFikri from './components/Mijozlarfikri.jsx'
+import Footer from './components/Footer.jsx'
+import { toast, ToastContainer } from 'react-toastify'
 
 
 
@@ -44,14 +39,24 @@ function App() {
         <Route path='/xizmatlar' element={<Xizmatlar/>}/>
         <Route path='/loyihalar' element={<Loyihalar/>}/>
         <Route path='/boglanish' element={<Boglanish/>}/>
+        <Route path='/mijozlarfikri' element={<MijozlarFikri/>}/>
         <Route path='/card/:id' element={<SingleCard/>}/>
-        {/* <Route path='/mijozlarfikri' element={<Mijozlarfikri/>}/> */}
-        
-        
+        <Route path='/card2/:id' element={<SingleCard2/>}/>
       </Routes>
-      {/* <Section1/> */}
-      {/* <Section2/>
-      <Section3/> */}
+      <ToastContainer
+  position="top-right"
+  autoClose={3000}
+  hideProgressBar={false}
+  newestOnTop
+  closeOnClick
+  rtl={false}
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+  theme="dark"
+/>
+
+      <Footer/>
     </div>
   )
 }

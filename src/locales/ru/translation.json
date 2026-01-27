@@ -54,7 +54,7 @@
   "Eng yaxshi xizmatlar": "Лучшие услуги",
   "Постельное Белье": "Постельное белье",
   "Носовное платок": "Носовой платок",
-  "Европостель": "Европостіль",
+  "Европостель": "Европостель",
   "Бязь Отбеленное": "Бязь отбеленная",
   "Бязь": "Бязь",
   "Вафельное полотно": "Вафельная ткань",
@@ -63,8 +63,90 @@
   "Нетканое полотно": "Нетканое полотно",
   "Головной платок": "Головной платок",
   "AZAM TEKS": "AZAM TEKS",
+    "Qidiruv...": "Поиск...",
+  "Ishlab chiqarish": "Производство",
+  "Paxta urug’ini ekish va yig’ish": "Посадка и сбор хлопка",
+  "Paxta tozalash zavodi": "Хлопкоочистительный завод",
+  "Yigiruv, to’quv va bo’yash": "Прядение, ткачество и окрашивание",
+  "Tikuvchilik sexlari": "Швейные цеха",
+  "50 ta JX90A-260CM AIR JET LOOMS dastgohi": "50 станков JX90A-260CM AIR JET LOOMS",
+  "Sifat nazorati": "Контроль качества",
+  "Xalqaro sifat standartlari": "Международные стандарты качества",
+  "Texnologik jarayon": "Технологический процесс",
+  "Materiallarni tanlash": "Выбор материалов",
+  "Tozalash va tayyorlash": "Очистка и подготовка",
+  "Yigiruv va to’quv": "Прядение и ткачество",
+  "Bo’yash va qayta ishlash": "Окрашивание и обработка",
+  "Tikuv va tayyor mahsulot": "Шитье и готовая продукция",
+  "Bizning ishlab chiqarish korxonamiz zamonaviy texnologiyalar va yuqori sifatli uskunalar bilan jihozlangan. Biz 100% paxta mahsulotlarini to'liq texnologik tsikl bo'yicha ishlab chiqaramiz.": "Наше производственное предприятие оснащено современными технологиями и высококачественным оборудованием. Мы производим 100% хлопковые изделия по полному технологическому циклу.",
+  "Paxta urug’ini ekish va yig’ish jarayoni yuqori sifat bilan amalga oshiriladi.": "Посадка и сбор хлопка выполняются с высоким качеством.",
+  "Paxtani tozalash va tayyorlash jarayoni maksimal samaradorlik bilan amalga oshiriladi.": "Процесс очистки и подготовки хлопка выполняется с максимальной эффективностью.",
+  "Zamonaviy dastgohlar yordamida to’quv va bo’yash jarayoni yuqori sifat bilan bajariladi.": "Процесс ткачества и окрашивания выполняется на современном оборудовании с высоким качеством.",
+  "Yakuni tayyor mahsulotlar sifat nazorati ostida tikuvchilik sexlarida ishlab chiqariladi.": "Готовые изделия изготавливаются в швейных цехах под контролем качества.",
+  "Korporatsiyada mahsulotlar uchun 50 ta zamonaviy dastgoh o’rnatilgan.": "В корпорации установлено 50 современных станков для продукции.",
+  "Bizning mahsulotlarimiz xalqaro standartlarga javob beradi. Har bir bosqichda qat’iy sifat nazorati o'tkaziladi.": "Наша продукция соответствует международным стандартам. На каждом этапе проводится строгий контроль качества.",
+  "Har bir bosqichda sifat nazorati va 100% paxta materiallari ishlatiladi.": "На каждом этапе осуществляется контроль качества, используются 100% хлопковые материалы.",
+  "Bizning ishlab chiqarish jarayonimiz zamonaviy va samarali. Har bir bosqich ehtiyotkorlik bilan nazorat qilinadi va eng yaxshi natijalarni ta’minlaydi.": "Наш производственный процесс современный и эффективный. Каждый этап тщательно контролируется и обеспечивает наилучшие результаты.",
+  "Eng yaxshi paxta navlarini tanlaymiz.": "Мы выбираем лучшие сорта хлопка.",
+  "Paxta tozalash va tayyorlash jarayonlari.": "Процессы очистки и подготовки хлопка.",
+  "Zamonaviy dastgohlar yordamida to’quv.": "Ткачество на современном оборудовании.",
+  "Yuqori sifatli bo’yash va qayta ishlash.": "Высококачественное окрашивание и обработка.",
+  "Tikuvchilik va yakuniy mahsulot tayyorlash.": "Швейное производство и финальная подготовка продукции.",
+
   "Why Choose Us": "Почему именно мы",
   "Yopish": "Закрыть",
   "Tun rejimi": "Ночной режим",
-  "Kun rejimi": "Дневной режим"
+  "Kun rejimi": "Дневной режим",
+  "Mijozlarimiz fikrlari": "Отзывы наших клиентов",
+  "reviews": {
+    "review1": {
+      "name": "Алишер Х.",
+      "text": "Качество продукта очень высокое. Все ткани натуральные, мягкие и сохраняются долго. Рекомендую!"
+    },
+    "review2": {
+      "name": "Малика С.",
+      "text": "Доставка быстрая, сервис отличный. Всегда следят за качеством и уделяют внимание клиенту."
+    },
+    "review3": {
+      "name": "Жасур А.",
+      "text": "Ткань мягкая и удобная. Отличный вариант как для дома, так и для подарка. Очень доволен!"
+    },
+    "review4": {
+      "name": "Гульнара Р.",
+      "text": "Лучший текстильный завод! Продукция качественная и современная по дизайну. Всем рекомендую."
+    },
+    "review5": {
+      "name": "Бахтиёр К.",
+      "text": "Качество ткани и отношение к клиентам на высоте. Каждый продукт тщательно изготовлен."
+    },
+    "review6": {
+      "name": "Дийор М.",
+      "text": "Быстрая доставка и качественный продукт! Новая коллекция всегда очень красивая."
+    },
+    "review7": {
+      "name": "Нодира Т.",
+      "text": "Хороший сервис, качественная ткань и быстрая доставка. Всегда доволен."
+    },
+    "review8": {
+      "name": "Рустам С.",
+      "text": "Ткани натуральные и удобные, цвета сохраняются долго. Рекомендую!"
+    },
+    "review9": {
+      "name": "Дильшод Б.",
+      "text": "Продукты отличные! Очень доволен работой завода, обслуживание на высшем уровне."
+    },
+    "review10": {
+      "name": "Шахло Г.",
+      "text": "Все на высшем уровне, ткань очень качественная и мягкая. Большое спасибо!"
+    },
+    "review11": {
+      "name": "Олим Ж.",
+      "text": "Дизайн и качество продукции очень высокое. Отлично для дома и для подарков друзьям."
+    },
+    "review12": {
+      "name": "Нилуфар Т.",
+      "text": "Каждый заказ тщательно подготовлен. Ткани мягкие, качественные и удобные."
+    }
+  }
+
 }

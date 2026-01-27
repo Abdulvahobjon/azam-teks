@@ -66,5 +66,85 @@
   "Why Choose Us": "Why Choose Us",
   "Yopish": "Close",
   "Tun rejimi": "Dark Mode",
-  "Kun rejimi": "Light Mode"
+  "Kun rejimi": "Light Mode",
+  "Mijozlarimiz fikrlari": "Our Clients' Reviews",
+    "Qidiruv...": "Search...",
+  "Ishlab chiqarish": "Production",
+  "Paxta urug’ini ekish va yig’ish": "Planting and harvesting cotton",
+  "Paxta tozalash zavodi": "Cotton cleaning factory",
+  "Yigiruv, to’quv va bo’yash": "Spinning, weaving and dyeing",
+  "Tikuvchilik sexlari": "Sewing workshops",
+  "50 ta JX90A-260CM AIR JET LOOMS dastgohi": "50 JX90A-260CM AIR JET LOOMS machines",
+  "Sifat nazorati": "Quality control",
+  "Xalqaro sifat standartlari": "International quality standards",
+  "Texnologik jarayon": "Technological process",
+  "Materiallarni tanlash": "Material selection",
+  "Tozalash va tayyorlash": "Cleaning and preparation",
+  "Yigiruv va to’quv": "Spinning and weaving",
+  "Bo’yash va qayta ishlash": "Dyeing and processing",
+  "Tikuv va tayyor mahsulot": "Sewing and finished product",
+  "Bizning ishlab chiqarish korxonamiz zamonaviy texnologiyalar va yuqori sifatli uskunalar bilan jihozlangan. Biz 100% paxta mahsulotlarini to'liq texnologik tsikl bo'yicha ishlab chiqaramiz.": "Our production facility is equipped with modern technologies and high-quality equipment. We manufacture 100% cotton products through a full technological cycle.",
+  "Paxta urug’ini ekish va yig’ish jarayoni yuqori sifat bilan amalga oshiriladi.": "The process of planting and harvesting cotton is carried out with high quality.",
+  "Paxtani tozalash va tayyorlash jarayoni maksimal samaradorlik bilan amalga oshiriladi.": "The cotton cleaning and preparation process is carried out with maximum efficiency.",
+  "Zamonaviy dastgohlar yordamida to’quv va bo’yash jarayoni yuqori sifat bilan bajariladi.": "Weaving and dyeing processes are performed with high quality using modern machines.",
+  "Yakuni tayyor mahsulotlar sifat nazorati ostida tikuvchilik sexlarida ishlab chiqariladi.": "Finished products are made in sewing workshops under quality control.",
+  "Korporatsiyada mahsulotlar uchun 50 ta zamonaviy dastgoh o’rnatilgan.": "The corporation has 50 modern machines installed for production.",
+  "Bizning mahsulotlarimiz xalqaro standartlarga javob beradi. Har bir bosqichda qat’iy sifat nazorati o'tkaziladi.": "Our products meet international standards. Strict quality control is conducted at every stage.",
+  "Har bir bosqichda sifat nazorati va 100% paxta materiallari ishlatiladi.": "Quality control is applied at every stage and 100% cotton materials are used.",
+  "Bizning ishlab chiqarish jarayonimiz zamonaviy va samarali. Har bir bosqich ehtiyotkorlik bilan nazorat qilinadi va eng yaxshi natijalarni ta’minlaydi.": "Our production process is modern and efficient. Each stage is carefully controlled to ensure the best results.",
+  "Eng yaxshi paxta navlarini tanlaymiz.": "We select the best cotton varieties.",
+  "Paxta tozalash va tayyorlash jarayonlari.": "Cotton cleaning and preparation processes.",
+  "Zamonaviy dastgohlar yordamida to’quv.": "Weaving using modern machines.",
+  "Yuqori sifatli bo’yash va qayta ishlash.": "High-quality dyeing and processing.",
+  "Tikuvchilik va yakuniy mahsulot tayyorlash.": "Sewing and final product preparation.",
+  "reviews": {
+    "review1": {
+      "name": "Alisher H.",
+      "text": "The product quality is very high. All fabrics are natural, soft, and last a long time. Highly recommended!"
+    },
+    "review2": {
+      "name": "Malika S.",
+      "text": "Delivery is fast, and the service is excellent. They always monitor quality and pay attention to customers."
+    },
+    "review3": {
+      "name": "Jasur A.",
+      "text": "The fabric is soft and comfortable. Perfect for home or as a gift. Very satisfied!"
+    },
+    "review4": {
+      "name": "Gulnara R.",
+      "text": "The best textile factory! Products are high-quality and modern in design. I recommend it to everyone."
+    },
+    "review5": {
+      "name": "Bakhtiyor K.",
+      "text": "Fabric quality and customer service are excellent. Each product is carefully made."
+    },
+    "review6": {
+      "name": "Diyor M.",
+      "text": "Fast delivery and high-quality products! The new collection is always very beautiful."
+    },
+    "review7": {
+      "name": "Nodira T.",
+      "text": "Good service, quality fabric, and fast delivery. Always satisfied."
+    },
+    "review8": {
+      "name": "Rustam S.",
+      "text": "Fabrics are natural and comfortable, colors last long. Highly recommended!"
+    },
+    "review9": {
+      "name": "Dilshod B.",
+      "text": "The products are great! Very satisfied with the factory work, top-notch service."
+    },
+    "review10": {
+      "name": "Shahlo G.",
+      "text": "Everything is excellent, fabric is very high-quality and soft. Thank you very much!"
+    },
+    "review11": {
+      "name": "Olim J.",
+      "text": "The design and quality of the products are excellent. Perfect for home and gifts for friends."
+    },
+    "review12": {
+      "name": "Nilufar T.",
+      "text": "Each order is carefully prepared. Fabrics are soft, high-quality, and comfortable."
+    }
+  }
 }

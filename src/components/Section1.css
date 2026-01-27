@@ -14,8 +14,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
 }
 
 /* Hero Image with Elegant Overlay */
@@ -24,7 +22,7 @@
   height: 100%;
   object-fit: cover;
   filter: brightness(0.5);
-  transition: transform var(--transition-slow);
+  transition: transform 0.8s ease;
 }
 
 .slide:hover .slide-img {
@@ -48,17 +46,18 @@
   z-index: 1;
 }
 
-/* Content */
+/* Content - по центру */
 .content {
   position: absolute;
   top: 50%;
-  left: 8%;
-  transform: translateY(-50%);
+  left: 30%;
+  transform: translate(-50%, -50%);
   color: white;
   max-width: 600px;
   z-index: 2;
-  animation: fadeInUp 0.8s ease-out;
+  animation: fadeIn 1s ease forwards;
 }
+
 
 .content h2 {
   font-size: clamp(2rem, 5vw, 3.5rem);
@@ -69,7 +68,33 @@
   color: #ffffff;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
+/* ================= MOBILE BUTTON ================= */
+.mobile-btn {
+  display: none; /* скрыта на ПК */
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--brand-primary);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
+.mobile-btn:hover {
+  background: #ff7a3d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 94, 20, 0.3);
+}
+
+/* Показывать кнопку только на мобильных */
+@media (max-width: 768px) {
+  .mobile-btn {
+    display: inline-block;
+  }
+}
 .content p {
   font-size: clamp(1rem, 2vw, 1.25rem);
   opacity: 0.95;
@@ -79,7 +104,24 @@
   margin-bottom: 2rem;
 }
 
-/* Navigation Arrows - Premium Style */
+/* Button visible only on mobile */
+.mobile-btn {
+  display: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  background: var(--brand-primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-btn:hover {
+  background: #ff7a3d;
+  transform: translateY(-2px);
+}
+
+/* Navigation Arrows */
 .swiper-button-next,
 .swiper-button-prev {
   color: white;
@@ -88,9 +130,8 @@
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all var(--transition-base);
+  transition: all 0.3s ease;
   margin-top: -28px;
 }
 
@@ -122,7 +163,7 @@
   height: 12px;
   background: rgba(255, 255, 255, 0.5);
   opacity: 1;
-  transition: all var(--transition-base);
+  transition: all 0.3s ease;
   border-radius: 6px;
 }
 
@@ -139,7 +180,6 @@
   }
 
   .content {
-    left: 6%;
     max-width: 500px;
   }
 }
@@ -155,20 +195,14 @@
   }
 
   .content {
-    left: 5%;
-    right: 5%;
-    max-width: 100%;
-    text-align: left;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
   }
 
-  .content h2 {
-    font-size: clamp(1.75rem, 6vw, 2.5rem);
-    margin-bottom: 0.75rem;
-  }
-
-  .content p {
-    font-size: clamp(0.95rem, 3vw, 1.1rem);
-    margin-bottom: 1.5rem;
+  .mobile-btn {
+    display: inline-block;
+    margin-top: 1rem;
   }
 }
 
@@ -177,20 +211,28 @@
     height: 400px;
   }
 
-  .content {
-    left: 4%;
-    right: 4%;
+  .content h2 {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+  }
+
+  .content p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .mobile-btn {
+    font-size: 14px;
+    padding: 10px 20px;
   }
 }
 
-/* Animation Keyframes */
-@keyframes fadeInUp {
+/* Animations */
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translate(-50%, -40%);
   }
   to {
     opacity: 1;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
   }
 }

@@ -1,0 +1,287 @@
+/* ========================================
+   Root Variables
+   ======================================== */
+
+:root {
+  --brand-primary: #ff5e14;
+  --brand-dark: rgb(2, 13, 38);
+  --brand-dark-rgb: 2, 13, 38;
+
+  --text-primary: rgb(2, 13, 38);
+  --text-secondary: rgba(2, 13, 38, 0.7);
+  --text-light: rgba(255, 255, 255, 0.9);
+
+  --bg-white: #ffffff;
+  --bg-light: #f8f9fa;
+
+  --border-light: rgba(2, 13, 38, 0.1);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================
+   Factory Sections
+   ======================================== */
+
+.factory-sections-container {
+  width: 100%;
+  padding: 80px 20px;
+  background: var(--bg-white);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+}
+
+.factory-section-item {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all var(--transition-base);
+}
+
+.factory-section-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.factory-section-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 40px;
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.factory-section-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.factory-section-content:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(var(--brand-dark-rgb), 0.25);
+}
+
+/* ========================================
+   Text Content
+   ======================================== */
+
+.factory-section-text {
+  flex: 1;
+}
+
+/* 🔥 FAFAQAT SHU JOY O‘ZGARGAN */
+.factory-section-text h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+  background: linear-gradient(
+    90deg,
+    var(--brand-primary),
+    var(--brand-dark)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.factory-section-text p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+/* ========================================
+   List
+   ======================================== */
+
+.factory-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.factory-list li {
+  position: relative;
+  padding: 12px 0 12px 32px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  transition: transform var(--transition-base), color var(--transition-base);
+}
+
+.factory-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--brand-primary);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.factory-list li:hover {
+  transform: translateX(8px);
+  color: var(--text-primary);
+}
+
+/* ========================================
+   Process Steps
+   ======================================== */
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px;
+  background: var(--bg-light);
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.process-step:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(var(--brand-dark-rgb), 0.25);
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--brand-primary);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.process-step h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.process-step p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 768px) {
+  .factory-sections-container {
+    padding: 60px 16px;
+  }
+
+  .factory-section-item {
+    margin-bottom: 60px;
+  }
+
+  .factory-section-content {
+    flex-direction: column !important;
+    padding: 32px 24px;
+    gap: 32px;
+  }
+
+  .factory-section-text h2 {
+    font-size: 2rem;
+  }
+
+  .factory-section-text p {
+    font-size: 1rem;
+  }
+
+  .process-step {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.125rem;
+  }
+}
+
+/* ===============================
+   FACTORY SECTIONS — MOBILE SAFE
+   =============================== */
+@media (max-width: 768px) {
+
+  /* Секции сразу видны, без анимаций */
+  .factory-section-item {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none;
+    will-change: auto;
+  }
+
+  .factory-section-item.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Контейнер без hover-прыжков */
+  .factory-section-content:hover {
+    transform: none;
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-light);
+  }
+
+  /* Убираем hover-анимации списков */
+  .factory-list li:hover {
+    transform: none;
+    color: var(--text-secondary);
+  }
+
+  /* Process steps — статично */
+  .process-step {
+    transition: none;
+  }
+
+  .process-step:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--border-light);
+  }
+}

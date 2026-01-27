@@ -145,3 +145,61 @@
     text-align: center;
   }
 }
+/* ========================================
+   About Section - Dark Theme
+   ======================================== */
+[data-theme="dark"] .about-section,
+.dark .about-section {
+  background: rgba(2, 13, 38, 0.3); /* тёмный прозрачный фон */
+}
+
+[data-theme="dark"] .about-container,
+.dark .about-container {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .about-image img,
+.dark .about-image img {
+  border: 1px solid rgba(255, 94, 20, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .about-image img:hover,
+.dark .about-image img:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .about-text .small-title,
+.dark .about-text .small-title {
+  color: rgba(255, 94, 20, 0.9); /* оранжевый акцент */
+}
+
+[data-theme="dark"] .about-text .subtitle,
+.dark .about-text .subtitle {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .about-text p,
+.dark .about-text p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  [data-theme="dark"] .about-image img,
+  .dark .about-image img {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  [data-theme="dark"] .about-section,
+  .dark .about-section {
+    padding: 60px 20px;
+  }
+
+  [data-theme="dark"] .about-text,
+  .dark .about-text {
+    text-align: center;
+  }
+}

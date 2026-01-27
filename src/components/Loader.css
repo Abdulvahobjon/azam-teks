@@ -1,5 +1,5 @@
 /* ========================================
-   Premium Loader - Brand Colors
+   Premium Loader - Dark Blue & Orange
    ======================================== */
 
 .loader-overlay {
@@ -11,72 +11,71 @@
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  animation: fadeIn 0.3s ease-out;
+  animation: fadeIn 0.4s ease-out forwards;
 }
 
 .loader {
   display: flex;
-  gap: 12px;
-  align-items: center;
+  gap: 16px;
+  align-items: flex-end;
 }
 
 .circle {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   background: var(--brand-primary);
   border-radius: 50%;
-  animation: bounce 0.8s infinite alternate;
-  box-shadow: 0 0 20px rgba(255, 94, 20, 0.5);
+  animation: bounce 0.8s infinite ease-in-out;
+  box-shadow: 0 0 12px rgba(255, 94, 20, 0.5);
   transition: all var(--transition-base);
 }
 
-.circle:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.circle:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.circle:nth-child(3) {
-  animation-delay: 0.4s;
-}
+.circle:nth-child(1) { animation-delay: 0s; }
+.circle:nth-child(2) { animation-delay: 0.2s; }
+.circle:nth-child(3) { animation-delay: 0.4s; }
+.circle:nth-child(4) { animation-delay: 0.6s; } /* ещё одна для динамики */
 
 @keyframes bounce {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.4;
-  }
-  100% {
-    transform: translateY(-24px) scale(1.1);
-    opacity: 1;
-    box-shadow: 0 0 30px rgba(255, 94, 20, 0.8);
-  }
+  0%   { transform: translateY(0) scale(1); opacity: 0.5; }
+  50%  { transform: translateY(-24px) scale(1.2); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 0.5; }
 }
 
 .loader-text {
   margin-top: 32px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   font-size: 1rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   animation: pulse 2s ease-in-out infinite;
 }
 
 @keyframes pulse {
-  0%, 100% {
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 1;
-  }
+  0%, 100% { opacity: 0.7; }
+  50%      { opacity: 1; }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Добавим плавное появление каждой точки */
+.circle {
+  animation-name: bounce, glow;
+  animation-duration: 0.8s, 1.6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 12px rgba(255, 94, 20, 0.4); }
+  50%      { box-shadow: 0 0 24px rgba(255, 94, 20, 0.8); }
+}
+
+/* Мобильная адаптация */
+@media (max-width: 480px) {
+  .circle { width: 12px; height: 12px; }
+  .loader { gap: 12px; }
+  .loader-text { font-size: 0.9rem; }
 }

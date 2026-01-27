@@ -170,7 +170,10 @@
   gap: 8px;
   align-items: center;
 }
+.footer-bottom p{
+  color: rgba(255, 255, 255, 0.6);
 
+}
 .footer-policy a {
   color: rgba(255, 255, 255, 0.7);
   transition: all var(--transition-base);
@@ -213,4 +216,79 @@
   .social-icons {
     justify-content: flex-start;
   }
+}
+
+/* ========================================
+   Footer - Dark Theme
+   ======================================== */
+[data-theme="dark"] .footer,
+.dark .footer {
+  background: linear-gradient(135deg, #020d26 0%, #050f32 100%);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] .footer::before,
+.dark .footer::before {
+  background: linear-gradient(90deg, transparent, rgba(255, 94, 20, 0.8), transparent);
+  opacity: 0.2;
+}
+
+[data-theme="dark"] .footer-section h4,
+.dark .footer-section h4 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .footer-section h4::after,
+.dark .footer-section h4::after {
+  background: rgba(255, 94, 20, 0.9);
+}
+
+[data-theme="dark"] .footer-section ul li a,
+.dark .footer-section ul li a,
+[data-theme="dark"] .contact span,
+.dark .contact span,
+[data-theme="dark"] .contact a,
+.dark .contact a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+[data-theme="dark"] .footer-section ul li a:hover,
+.dark .footer-section ul li a:hover,
+[data-theme="dark"] .contact span:hover,
+.dark .contact span:hover,
+[data-theme="dark"] .contact a:hover,
+.dark .contact a:hover {
+  color: rgba(255, 94, 20, 0.95);
+}
+
+[data-theme="dark"] .social-icons a,
+.dark .social-icons a {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+[data-theme="dark"] .social-icons a:hover,
+.dark .social-icons a:hover {
+  color: rgba(255, 94, 20, 0.95);
+  background: rgba(255, 94, 20, 0.15);
+  border-color: rgba(255, 94, 20, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 94, 20, 0.2);
+}
+
+[data-theme="dark"] .footer-bottom,
+.dark .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .footer-policy a,
+.dark .footer-policy a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .footer-policy a:hover,
+.dark .footer-policy a:hover {
+  color: rgba(255, 94, 20, 0.95);
+  background: rgba(255, 94, 20, 0.1);
 }

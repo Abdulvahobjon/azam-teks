@@ -232,13 +232,47 @@
     opacity: 1;
   }
 }
+@media (max-width: 768px) {
+  /* body{
+    overflow: hidden;
+  } */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 80vh;       /* ключ: занимает весь экран */
+    min-height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* центрируем модалку */
+    padding: 0;           /* убираем padding сверху */
+    overflow: hidden;     /* больше нет скролла, overlay закрывает весь экран */
+    background: rgba(2, 13, 38, 0.95); /* фон полностью */
+    z-index: 10000;
+    margin: 0;
+    background: transparent !important; /* фон прозрачный */
+  pointer-events: none; /* клики по overlay не работают */
+  }
+
+  .formMessage {
+    max-width: 90%;
+    width: 100%;
+    max-height: 90vh;     /* если контент слишком большой, слегка скроллит внутри модалки */
+    overflow-y: auto;
+      pointer-events: auto; /* модалка по-прежнему реагирует на клики */
+
+  }
+}
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .overlay {
     padding: 16px;
     align-items: flex-start;
-    padding-top: 40px;
+    /* padding-top: 40px; */
+    margin-top: -700px;
+    /* margin-bottom: -100px; */
   }
 
   .formMessage {
@@ -290,10 +324,11 @@
     right: 20px;
     z-index: 998;
     box-shadow: 0 8px 24px rgba(2, 13, 38, 0.4);
-    border-radius: 50px;
+    border-radius: 10px;
+    background-color:  rgba(255, 255, 255, 0.05);
     padding: 16px 28px;
     font-size: 14px;
-    width: auto;
+    width: 90%;
   }
 }
 
@@ -334,9 +369,79 @@
   }
 
   .nav-btn {
-    bottom: 16px;
+    bottom: -15px;
     right: 16px;
-    padding: 14px 24px;
-    font-size: 13px;
+    padding: 18px 28px;
+    font-size: 15px;
   }
+}
+/* ================= DARK THEME - Contact Form ================= */
+
+
+[data-theme="dark"] .formMessage,
+.dark .formMessage {
+  background: var(--brand-dark); /* твой тёмно-синий фон */
+  color: #ffffff; /* текст белый */
+  border: 1px solid var(--brand-primary); /* линии оранжевые */
+  box-shadow: 0 20px 50px rgba(2, 13, 38, 0.5); /* мягкая тень */
+}
+
+[data-theme="dark"] .formMessage h3,
+.dark .formMessage h3 {
+  color: #ffffff; /* заголовок белый */
+}
+
+[data-theme="dark"] .formMessage input,
+[data-theme="dark"] .formMessage textarea,
+[data-theme="dark"] .formMessage select,
+.dark .formMessage input,
+.dark .formMessage textarea,
+.dark .formMessage select {
+  background: var(--brand-dark); /* твой темный фон полей */
+  color: #ffffff; /* текст видимый */
+  border: 1.5px solid #333a60; /* светлая граница для читаемости */
+}
+
+[data-theme="dark"] .formMessage input::placeholder,
+[data-theme="dark"] .formMessage textarea::placeholder,
+.dark .formMessage input::placeholder,
+.dark .formMessage textarea::placeholder {
+  color: #a0a8c0; /* мягкий серо-голубой, читаемый на тёмном фоне */
+}
+
+[data-theme="dark"] .formMessage input:focus,
+[data-theme="dark"] .formMessage textarea:focus,
+[data-theme="dark"] .formMessage select:focus,
+.dark .formMessage input:focus,
+.dark .formMessage textarea:focus,
+.dark .formMessage select:focus {
+  border-color: var(--brand-primary); /* оранжевый акцент при фокусе */
+  box-shadow: 0 0 0 3px rgba(255, 94, 20, 0.15);
+}
+
+[data-theme="dark"] .submit-btn,
+.dark .submit-btn {
+  background: var(--brand-dark); /* тёмно-синий фон кнопки */
+  color: #ffffff;
+  border: 1px solid var(--brand-primary); /* линии оранжевые */
+}
+
+[data-theme="dark"] .submit-btn:hover,
+.dark .submit-btn:hover {
+  background: linear-gradient(135deg, var(--brand-primary), #ff7a3d); /* оранжевый hover */
+  box-shadow: 0 6px 20px rgba(255, 94, 20, 0.35);
+  filter: brightness(1.05);
+}
+
+[data-theme="dark"] .close-btn,
+.dark .close-btn {
+  background: var(--brand-dark); /* тёмно-синий фон */
+  color: #ffffff;
+  border: 1px solid #333a60;
+}
+
+[data-theme="dark"] .close-btn:hover,
+.dark .close-btn:hover {
+  background: var(--brand-primary); /* оранжевый hover */
+  color: #ffffff;
 }

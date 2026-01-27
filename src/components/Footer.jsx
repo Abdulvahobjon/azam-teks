@@ -39,8 +39,8 @@ export default function Footer() {
         </div>
 
         <div className="footer-section contact">
-          <h4>{t("Manzil:")}</h4>
-          <p>160105, Namangan, Наманганская область</p><br />
+          <h4>{t("Manzil")}</h4>
+          <p>160105, Namangan, Balandariq 6A berk koʻchasi, 42</p><br />
           <span><FaPhone/>(90) 222-78-77</span>
           <Link to={"https://e.mail.ru/compose/?to=azam-teks-mchj%40mail.ru"}><MdEmail/>azam-teks-mchj@mail.ru</Link>
           <span></span>

@@ -1,0 +1,200 @@
+.production {
+  padding: 80px 8%;
+  background: #f7f9fc;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #111;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ff7a3d;
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 20px 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.card.in-view {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card-number {
+  width: 50px;
+  height: 50px;
+  background: #ff7a3d;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 5px 20px rgba(255, 122, 61, 0.3);
+  transition: all 0.4s ease;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #111;
+  transition: all 0.4s ease;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  transition: all 0.4s ease;
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 30px 50px rgba(0,0,0,0.12);
+}
+
+.card:hover .card-number {
+  background: #ff944d;
+  box-shadow: 0 10px 30px rgba(255,148,77,0.4);
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .production {
+    padding: 60px 5%;
+  }
+  .cards {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .production {
+    padding: 40px 4%;
+  }
+  .card {
+    padding: 25px 15px 20px;
+  }
+  .card-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .card h3 {
+    font-size: 1.1rem;
+  }
+  .card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ========================================
+   Production Section - Dark Theme (Единый фон)
+   ======================================== */
+[data-theme="dark"] .production,
+.dark .production,
+[data-theme="dark"] .card,
+.dark .card {
+  background: #111428; /* единый тёмный фон для секции и карточек */
+  color: #e0e0e0;      /* светлый текст для читаемости */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* тень, чтобы элементы "всплывали" */
+}
+
+/* Заголовки и акценты */
+[data-theme="dark"] .section-title,
+.dark .section-title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .section-title::after,
+.dark .section-title::after,
+[data-theme="dark"] .card-number,
+.dark .card-number {
+  background: #ff5e14; /* единый акцент */
+  color: #ffffff;
+}
+
+/* Текст внутри карточек */
+[data-theme="dark"] .card h3,
+.dark .card h3 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .card p,
+.dark .card p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Hover эффект */
+[data-theme="dark"] .card:hover,
+.dark .card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 30px 50px rgba(0,0,0,0.6);
+}
+
+[data-theme="dark"] .card:hover .card-number,
+.dark .card:hover .card-number {
+  background: #ff944d;
+  box-shadow: 0 10px 30px rgba(255,148,77,0.6);
+}
+
+/* ===============================
+   MOBILE — STABLE & BEAUTIFUL
+   =============================== */
+@media (max-width: 768px) {
+
+  /* Карточки сразу видны, без анимаций */
+  .card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: box-shadow 0.2s ease;
+    will-change: auto;
+  }
+
+  /* Класс in-view больше ничего не делает */
+  .card.in-view {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Hover не прыгает на телефоне */
+  .card:hover {
+    transform: none;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  }
+
+  .card:hover .card-number {
+    background: #ff7a3d;
+    box-shadow: 0 5px 20px rgba(255, 122, 61, 0.3);
+  }
+}

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import "./ContactForm.css";
 import { useTranslation } from "react-i18next";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,13 +52,15 @@ export default function ContactForm() {
 
     // Telegramga yuboriladigan xabar
     const message = `
-📩 Yangi ma'lumot:
-Ism: ${form.name}
-Telefon: ${form.phone}
-Email: ${form.email}
-Mavzu: ${form.topic}
-Xabar: ${form.message}
-`;
+📩 Yangi so'rov:
+
+👤 Ism: ${form.name}
+📞 Telefon: ${form.phone}
+📧 Email: ${form.email}
+🏷 Mavzu: ${form.topic}
+
+📝 Xabar:
+${form.message}`;
 
     try {
       const res = await fetch(
@@ -66,7 +70,7 @@ Xabar: ${form.message}
       const data = await res.json();
 
       if (data.ok) {
-        alert(t("Xabar yuborildi!"));
+        toast.success(t("Xabar yuborildi!"));
         setForm({
           name: "",
           phone: "",
@@ -75,11 +79,11 @@ Xabar: ${form.message}
           message: "",
         });
       } else {
-        alert(t("Xatolik yuz berdi: ") + data.description);
+          toast.error(t("Xatolik yuz berdi: ") + data.description);
       }
     } catch (err) {
       console.error(err);
-      alert(t("Xatolik yuz berdi!"));
+       toast.error(t("Xatolik yuz berdi!"));
     }
 
     setIsOpen(false);
@@ -166,7 +170,9 @@ Xabar: ${form.message}
               {t("Yuborish")}
             </button>
           </form>
+          
         </div>
+        
       )}
     </>
   );

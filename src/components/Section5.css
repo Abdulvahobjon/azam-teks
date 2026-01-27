@@ -5,7 +5,47 @@
   text-align: center;
   background: var(--bg-white);
 }
+.service-card {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 24px rgba(2, 13, 38, 0.08);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  will-change: transform, opacity;
+}
 
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (hover: hover) {
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(2, 13, 38, 0.2);
+  }
+
+  .service-card:hover img {
+    transform: scale(1.08);
+  }
+
+  .service-card:hover h4 {
+    color: var(--brand-primary);
+  }
+}
+.service-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
 .services-grid {
   max-width: 1200px;
   margin: 0 auto;
@@ -135,5 +175,115 @@
   }
   .service-card img {
     height: 240px;
+  }
+}
+
+/* ========================================
+   Projects / Services Section - Dark Theme
+   ======================================== */
+[data-theme="dark"] .projects-section,
+.dark .projects-section {
+  background: rgba(2, 13, 38, 0.3); /* тёмный фон */
+}
+
+[data-theme="dark"] .projects-section h2,
+.dark .projects-section h2 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .projects-section h3,
+.dark .projects-section h3 {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .service-card {
+  background: rgba(255, 255, 255, 0.05); /* почти прозрачный белый */
+  border: 1px solid rgba(255, 94, 20, 0.2); /* тонкий оранжевый акцент */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .service-card h4 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .service-card:hover h4 {
+  color: rgba(255, 94, 20, 0.9);
+}
+
+[data-theme="dark"] .service-card img {
+  border-radius: 16px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+  transition: all var(--transition-base);
+}
+
+[data-theme="dark"] .service-card:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] .card-inner {
+  background: transparent;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .service-card:hover .card-inner {
+  transform: scale(1.03);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  [data-theme="dark"] .service-card img,
+  .dark .service-card img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  [data-theme="dark"] .service-card img,
+  .dark .service-card img {
+    height: 240px;
+  }
+}
+
+/* ===============================
+   PROJECTS / SERVICES — MOBILE SAFE
+   =============================== */
+@media (max-width: 768px) {
+
+  /* Карточки сразу видны */
+  .service-card {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: box-shadow 0.2s ease;
+    will-change: auto;
+  }
+
+  /* visible больше не анимирует */
+  .service-card.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Убираем hover-эмуляцию */
+  .service-card:hover {
+    transform: none;
+    box-shadow: 0 8px 24px rgba(2, 13, 38, 0.08);
+  }
+
+  .service-card:hover img,
+  .service-card:hover .card-inner {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .service-card:hover h4 {
+    color: var(--brand-dark);
+  }
+
+  /* Убираем image will-change */
+  .service-card img {
+    will-change: auto;
   }
 }

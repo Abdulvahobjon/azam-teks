@@ -5,9 +5,11 @@ import { useTranslation } from "react-i18next";
 import './Boglanish.css'
 import img1 from '../assets/contact_us.png'
 import Footer from './Footer'
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const TELEGRAM_BOT_TOKEN = "8260660890:AAE2lYCbJ7w8hsf3-Z4S7_BuiaSsP0MJ5fA";
-const CHAT_ID = "2090651301";
+const CHAT_ID = "-1003584258291";
 
 export default function ContactPage() {
   const { t } = useTranslation();
@@ -28,7 +30,7 @@ export default function ContactPage() {
     e.preventDefault();
 
     const text = `
-📩 Yangi so'rov
+📩 Yangi so'rov:
 
 👤 Ism: ${form.name}
 📞 Telefon: ${form.phone}
@@ -51,7 +53,7 @@ ${form.message}`;
       );
 
       if (res.status === 200) {
-        alert(t("Xabar yuborildi!"));
+         toast.success(t("Xabar yuborildi!"));
         setForm({
           name: "",
           phone: "",
@@ -60,10 +62,11 @@ ${form.message}`;
           message: "",
         });
       } else {
-        alert(t("Xatolik yuz berdi"));
+          toast.error(t("Xatolik yuz berdi: ") + data.description);
       }
     } catch (err) {
-      alert(t("Server bilan aloqa yo'q"));
+      console.error(err);
+       toast.error(t("Xatolik yuz berdi!"));
     }
   };
 
@@ -130,7 +133,6 @@ ${form.message}`;
         </form>
       </div>
     </div>
-<Footer/>
 
 </>
   );

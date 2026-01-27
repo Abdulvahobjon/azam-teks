@@ -1,0 +1,333 @@
+.single-card-section {
+  width: 100%;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-white);
+}
+
+.single-card-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--brand-dark);
+  margin-bottom: 50px;
+}
+
+[data-theme="dark"] .single-card-title {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.single-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.single-card-item {
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 24px rgba(2, 13, 38, 0.08);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: all 0.6s ease;
+}
+
+[data-theme="dark"] .single-card-item {
+  background: rgba(30, 41, 59, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .single-card-section {
+  background: var(--bg-white);
+}
+
+.single-card-item img {
+  width: 100%;
+  height: 100%; /* kartaga sig‘sin */
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  border-radius: 20px;
+}
+
+.single-card-item.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.single-card-item:hover img {
+  transform: scale(1.1);
+}
+
+.single-card-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(229, 57, 53, 0.2);
+  border-color: rgba(229, 57, 53, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .single-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .single-card-item {
+    height: 480px; /* planshet uchun biroz kichikroq, lekin balandroq */
+  }
+}
+
+@media (max-width: 640px) {
+  .single-card-section {
+    padding: 50px 15px;
+  }
+
+  .single-card-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .single-card-item {
+    height: 400px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .single-card-section {
+    padding: 40px 12px;
+  }
+
+  .single-card-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+    padding: 0 8px;
+    color: var(--text-primary);
+  }
+
+  [data-theme="dark"] .single-card-title {
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .single-card-grid {
+    gap: 20px;
+    padding: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .single-card-item {
+    width: 100%;
+    max-width: 100%;
+    height: 350px;
+    border-radius: 16px;
+    margin: 0 auto;
+  }
+
+  .single-card-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 360px) {
+  .single-card-section {
+    padding: 30px 10px;
+  }
+
+  .single-card-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .single-card-item {
+    height: 280px;
+  }
+}
+
+/* ========================================
+   Single Card Section - Dark Theme (Copy of Light Version)
+   ======================================== */
+
+[data-theme="dark"] .single-card-section {
+  background: var(--brand-dark); /* твой тёмно-синий фон секции */
+  color: #ffffff;
+}
+
+[data-theme="dark"] .single-card-title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .single-card-grid {
+  gap: 35px;
+}
+
+[data-theme="dark"] .single-card-item {
+  background: rgba(2, 13, 38, 0.95); /* тёмно-синий фон карточки */
+  border: 1px solid rgba(255, 94, 20, 0.3); /* оранжевый акцент только для границ */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: all 0.6s ease;
+}
+
+[data-theme="dark"] .single-card-item.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+[data-theme="dark"] .single-card-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+  filter: brightness(0.85);
+}
+
+[data-theme="dark"] .single-card-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(1);
+}
+
+[data-theme="dark"] .single-card-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(2, 13, 38, 0.6);
+  border-color: rgba(255, 94, 20, 0.4); /* оранжевый hover */
+}
+
+/* ================= Animations ================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 1024px) {
+  [data-theme="dark"] .single-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  [data-theme="dark"] .single-card-item {
+    height: 480px;
+  }
+}
+
+@media (max-width: 640px) {
+  [data-theme="dark"] .single-card-section {
+    padding: 50px 15px;
+  }
+  [data-theme="dark"] .single-card-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  [data-theme="dark"] .single-card-item {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  [data-theme="dark"] .single-card-section {
+    padding: 40px 12px;
+  }
+  [data-theme="dark"] .single-card-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  [data-theme="dark"] .single-card-grid {
+    gap: 20px;
+  }
+  [data-theme="dark"] .single-card-item {
+    height: 350px;
+    border-radius: 16px;
+  }
+  [data-theme="dark"] .single-card-item img {
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  [data-theme="dark"] .single-card-section {
+    padding: 30px 10px;
+  }
+  [data-theme="dark"] .single-card-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  [data-theme="dark"] .single-card-item {
+    height: 280px;
+  }
+}
+
+/* ===============================
+   Single Card Section — Mobile Safe
+   =============================== */
+@media (max-width: 768px) {
+
+  /* Показываем карточки сразу, без анимации */
+  .single-card-item,
+  .single-card-item.dark {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Убираем hover эффекты на карточках */
+  .single-card-item:hover,
+  .single-card-item.dark:hover {
+    transform: none !important;
+    box-shadow: 0 8px 24px rgba(2, 13, 38, 0.08);
+    border-color: var(--border-light);
+  }
+
+  /* Изображения без дергания и фильтров */
+  .single-card-item img,
+  .single-card-item.dark img {
+    transform: none !important;
+    filter: none !important;
+  }
+
+  /* Сетка адаптивная — одна колонка */
+  .single-card-grid,
+  .single-card-grid.dark {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  /* Высота карточек определяется контентом */
+  .single-card-item,
+  .single-card-item.dark {
+    height: auto;
+  }
+}

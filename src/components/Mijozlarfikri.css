@@ -1,0 +1,144 @@
+/* Основной контейнер */
+.reviews-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f5f5f5; /* светлый фон */
+  color: #1c1c3c; /* тёмно-синий текст */
+}
+
+/* Заголовки */
+.reviews-section h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #1c1c3c;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Сетка отзывов */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+/* Карточка отзыва */
+.review-card {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  border-radius: 25px;
+  padding: 35px 25px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transform: translateY(50px) scale(0.95);
+  opacity: 0;
+  transition: all 0.7s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Появление */
+.review-card.visible {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Эффект при наведении */
+.review-card:hover {
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Имя */
+.review-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Рейтинг */
+.review-rating {
+  margin: 10px 0 20px;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: #ddd;
+  margin-right: 3px;
+  transition: color 0.3s ease;
+}
+
+.star.filled {
+  color: #ff7f00; /* оранжевый цвет */
+}
+
+/* Текст */
+.review-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #1c1c3c;
+}
+
+/* Адаптивность для телефонов */
+@media (max-width: 768px) {
+  .reviews-section h2 {
+    font-size: 2.2rem;
+  }
+  .review-card {
+    padding: 25px 20px;
+  }
+}
+
+/* ========================================
+   Reviews Section - Dark Theme
+   ======================================== */
+
+[data-theme="dark"] .reviews-section {
+  background: var(--brand-dark); /* тёмно-синий фон */
+  color: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="dark"] .reviews-section h2 {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+[data-theme="dark"] .review-card {
+  background: rgba(0,21,50,0.85); /* тёмно-синий фон с прозрачностью */
+  border-radius: 25px;
+  padding: 35px 25px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  transform: translateY(50px) scale(0.95);
+  opacity: 0;
+  transition: all 0.7s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+[data-theme="dark"] .review-card.visible {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+[data-theme="dark"] .review-card:hover {
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+  transform: translateY(-5px) scale(1.02);
+}
+
+[data-theme="dark"] .review-content h3 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .review-content p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] .star {
+  color: #555; /* пустые звёзды */
+}
+
+[data-theme="dark"] .star.filled {
+  color: var(--brand-primary); /* оранжевые заполненные */
+}

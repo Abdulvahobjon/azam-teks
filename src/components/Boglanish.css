@@ -141,3 +141,121 @@
     padding: 32px 24px;
   }
 }
+
+/* ================= DARK THEME - Minimal ================= */
+[data-theme="dark"] .contact-page,
+.dark .contact-page {
+  background: var(--brand-dark); /* твой тёмно-синий */
+  color: #ffffff;
+}
+
+[data-theme="dark"] .contact-banner img,
+.dark .contact-banner img {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 94, 20, 0.2); /* очень мягкий оранжевый */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] .contact-banner img:hover,
+.dark .contact-banner img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .contact-form-container .formMessage,
+.dark .contact-form-container .formMessage {
+  background: rgba(0, 21, 50, 0.95); /* тёмно-синий фон */
+  border: 1px solid rgba(255, 94, 20, 0.2); /* минимальный оранжевый бордер */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .contact-form-container .formMessage h3,
+.dark .contact-form-container .formMessage h3 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .contact-form-container .formMessage input,
+[data-theme="dark"] .contact-form-container .formMessage select,
+[data-theme="dark"] .contact-form-container .formMessage textarea,
+.dark .contact-form-container .formMessage input,
+.dark .contact-form-container .formMessage select,
+.dark .contact-form-container .formMessage textarea {
+  background: rgba(0, 21, 50, 0.85);
+  color: #ffffff;
+  border: 1px solid rgba(255, 94, 20, 0.2);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] .contact-form-container .formMessage input:focus,
+[data-theme="dark"] .contact-form-container .formMessage select:focus,
+[data-theme="dark"] .contact-form-container .formMessage textarea:focus,
+.dark .contact-form-container .formMessage input:focus,
+.dark .contact-form-container .formMessage select:focus,
+.dark .contact-form-container .formMessage textarea:focus {
+  border-color: #ff5e14; /* оранжевый только на фокусе */
+  box-shadow: 0 0 0 2px rgba(255, 94, 20, 0.15);
+  outline: none;
+}
+
+[data-theme="dark"] .contact-form-container .submit-btn,
+.dark .contact-form-container .submit-btn {
+  background: rgba(255, 94, 20, 0.85); /* мягкий оранжевый */
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .contact-form-container .submit-btn:hover,
+.dark .contact-form-container .submit-btn:hover {
+  background: #ff7a3d; /* чуть ярче на hover */
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .contact-form-container .submit-btn:active,
+.dark .contact-form-container .submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .contact-page {
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 5%;
+  }
+
+  .contact-banner img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 40px 5%;
+  }
+
+  .contact-banner img {
+    height: 300px;
+  }
+
+  .contact-form-container .formMessage {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 30px 5%;
+  }
+
+  .contact-form-container .formMessage {
+    padding: 28px 20px;
+  }
+
+  .contact-form-container .submit-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+}

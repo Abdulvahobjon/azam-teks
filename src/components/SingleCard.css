@@ -93,3 +93,135 @@
     height: 450px; /* telefon ekraniga moslashtirdik */
   }
 }
+
+/* ========================================
+   Single Card Section - Dark Theme
+   ======================================== */
+
+.single-card-section.dark {
+  background: var(--brand-dark);
+  color: #ffffff;
+}
+
+.single-card-title.dark {
+  color: #ffffff;
+}
+
+.single-card-grid.dark {
+  /* оставляем те же настройки */
+}
+
+.single-card-item.dark {
+  width: 115%;
+  max-width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(0, 21, 50, 0.85); /* тёмно-синий фон с прозрачностью */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 94, 20, 0.3); /* оранжевая граница */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: all 0.6s ease;
+}
+
+.single-card-item.dark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: brightness(0.85); /* чуть затемняем изображение */
+}
+
+.single-card-item.dark.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: fadeInUpDark 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUpDark {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.single-card-item.dark:hover img {
+  transform: scale(1.1);
+  filter: brightness(1); /* подсветка на hover */
+}
+
+.single-card-item.dark:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+  border-color: var(--brand-primary); /* оранжевый hover */
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .single-card-grid.dark {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .single-card-item.dark {
+    height: 480px;
+  }
+}
+
+@media (max-width: 640px) {
+  .single-card-grid.dark {
+    grid-template-columns: 1fr;
+  }
+  .single-card-item.dark {
+    height: 450px;
+  }
+}
+/* ===============================
+   Single Card Section — Mobile Safe
+   =============================== */
+@media (max-width: 768px) {
+
+  /* Показываем карточки сразу, без анимации */
+  .single-card-item,
+  .single-card-item.dark {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Убираем hover эффекты на карточках */
+  .single-card-item:hover,
+  .single-card-item.dark:hover {
+    transform: none !important;
+    box-shadow: 0 8px 24px rgba(2, 13, 38, 0.08);
+    border-color: var(--border-light);
+  }
+
+  .single-card-item img,
+  .single-card-item.dark img {
+    transform: none !important;
+    filter: none !important; /* чтобы тёмное изображение не дергалось */
+  }
+
+  /* Сетка адаптивная */
+  .single-card-grid,
+  .single-card-grid.dark {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  /* Высота карточек под мобильные экраны */
+  .single-card-item,
+  .single-card-item.dark {
+    height: auto; /* пусть контент определяет высоту */
+  }
+}
