@@ -199,7 +199,9 @@ body > *:not(nav) {
     box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* можно слегка сделать тень */
     border-radius: 8px;
   }
-
+  .search-wrapper input{
+    width: 100%;
+  }
   .search-item {
     padding: 10px 12px;
   }
