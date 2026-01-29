@@ -80,7 +80,7 @@ import pol4 from '../assets/product/new/Нетканое полотно/polotno-
 export const services = [
   { title: 'Постельное Белье',id:1, img: [service1, service3, service4, service6, new2,new3,new4,new5,new6,new7] },
   { title: 'Носовное платок',id:2, img: [service2, dasramol2,dasramol3,dasramol4,dasramol5,dasramol6,dasramol7,dasramol8,dasramol9,dasramol10,dasramol11,dasramol12,dasramol13,dasramol14,dasramol15,dasramol16,dasramol17]},
-  { title: 'Постельное Белье',id:3, img: [service1, service3, service4, service6, new2,new3,new4,new5,new6,new7] },
+  { title: 'Постельное Белье',id:3, img: [service3, service1, service4, service6, new2,new3,new4,new5,new6,new7] },
   { title: 'Постельное Белье',id:4, img: [service1, service3, service4, service6, new2,new3,new4,new5,new6,new7] },
   { title: 'Европостель',id:5, img: [service5,matras2,matras3,matras4,matras5,matras6,matras7,matras8,matras9,matras10,matras11] },
   { title: 'Постельное Белье',id:6, img: [service6, service3, service4, service1, new2,new3,new4,new5,new6,new7] },

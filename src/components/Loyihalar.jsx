@@ -7,6 +7,7 @@ export default function Loyihalar(){
 	return(
 		<>
 			<Section5/>
+			<Footer/>
 		</>
 	)
 }

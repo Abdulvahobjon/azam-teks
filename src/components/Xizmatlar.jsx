@@ -7,6 +7,7 @@ export default function Xizmatlar(){
 	return(
 		<>
 			<Section4/>
+			<Footer/>
 		</>
 	)
 }

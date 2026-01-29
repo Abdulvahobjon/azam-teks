@@ -75,7 +75,7 @@ export default function Navbar() {
   const handleNavigate = (id) => {
     setMenuOpen(false);
     navigate(`/card/${id}`);
-    // navigate(`/card2/${id}`);
+    navigate(`/card2/${id}`);
     setSearchTerm('');
     setSearchResults([]);
   };
