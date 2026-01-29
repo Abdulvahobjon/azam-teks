@@ -100,8 +100,11 @@ export default function Navbar() {
 
       <nav className={scrolled ? 'scrolled' : ''}>
         <div className="name">
-          <img src={logo} alt="Logo" width={80} />
-          <h2>AZAM TEKS</h2>
+          <Link to={"/"} >
+            <img src={logo} alt="Logo" width={80} />
+        <h2>AZAM TEKS</h2>
+          </Link>
+          
         </div>
 
         <div className="nav-actions">
