@@ -252,22 +252,22 @@
 @media (max-width: 768px) {
 
   /* Карточки сразу видны */
-  .service-card {
+  /* .service-card {
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;
     transition: box-shadow 0.2s ease;
     will-change: auto;
-  }
+  } */
 
   /* visible больше не анимирует */
-  .service-card.visible {
+  /* .service-card.visible {
     opacity: 1;
     transform: none;
-  }
+  } */
 
   /* Убираем hover-эмуляцию */
-  .service-card:hover {
+  /* .service-card:hover {
     transform: none;
     box-shadow: 0 8px 24px rgba(2, 13, 38, 0.08);
   }
@@ -280,10 +280,10 @@
 
   .service-card:hover h4 {
     color: var(--brand-dark);
-  }
+  } */
 
   /* Убираем image will-change */
-  .service-card img {
+  /* .service-card img {
     will-change: auto;
-  }
+  } */
 }
