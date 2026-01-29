@@ -99,13 +99,15 @@ export default function Navbar() {
       
 
       <nav className={scrolled ? 'scrolled' : ''}>
-        <div className="name">
           <Link to={"/"} >
+
+        <div className="name">
             <img src={logo} alt="Logo" width={80} />
-        <h2>AZAM TEKS</h2>
-          </Link>
+            <h2>AZAM TEKS</h2>
           
         </div>
+          </Link>
+
 
         <div className="nav-actions">
   <div className={`burger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
