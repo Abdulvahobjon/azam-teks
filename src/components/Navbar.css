@@ -1,25 +1,6 @@
-/* ========================================
-   Navbar - Premium Corporate Design
-   ======================================== */
 body > *:not(nav) {
   padding-top: 165px;
 }
-
-/* nav {
-  position: absolute;
-  
-  top: -120px; 
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
-  transition: all var(--transition-base);
-} */
-
-
 .Nav_header {
   position: fixed;
   top: 0;
@@ -35,8 +16,6 @@ body > *:not(nav) {
   font-weight: 400;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
-
-
 .Nav_header .contact {
   display: flex;
   align-items: center;
@@ -51,9 +30,8 @@ body > *:not(nav) {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.85);
   transition: all var(--transition-base);
-  margin-bottom: 0; /* совпадает с нижним */
+  margin-bottom: 0;
 }
-/* Только для телефонного span */
 .Nav_header .contact span.phone {
   display: inline-flex;
   align-items: center;
@@ -63,13 +41,11 @@ body > *:not(nav) {
   transition: all 0.3s ease;
 }
 
-/* Иконка FaPhone смотрит вправо */
 .Nav_header .contact span.phone svg {
   transform: scaleX(-1); /* зеркально по горизонтали */
   transition: all 0.3s ease;
 }
 
-/* Hover эффект */
 .Nav_header .contact span.phone:hover {
   color: var(--brand-primary);
   transform: translateX(4px);
@@ -109,7 +85,6 @@ body > *:not(nav) {
   background: rgba(255, 94, 20, 0.1);
   transform: translateY(-2px);
 }
-/* Search input */
 .search-wrapper {
   position: relative;
   width: 150px;
@@ -139,7 +114,6 @@ body > *:not(nav) {
   box-shadow: 0 0 0 3px rgba(255, 94, 20, 0.1);
 }
 
-/* Search results dropdown */
 .search-results {
   position: absolute;
   top: 100%;
@@ -177,13 +151,11 @@ body > *:not(nav) {
   border-radius: 8px;
 }
 
-/* Mobile: search inside burger menu */
-/* Mobile: search inside burger menu */
 @media (max-width: 768px) {
   .search-wrapper {
     width: 90%;
     /* margin: 20px auto; */
-    margin-top: -400px;
+    margin-top: -330px;
     position: relative; /* важно, чтобы результаты были внутри wrapper */
     height: 40px;
   }
@@ -210,14 +182,7 @@ body > *:not(nav) {
   .Nav_header {
     display: none;
   }
-  /* .contact{
-    display: none;
-  } */
 }
-
-/* ========================================
-   Main Navigation
-   ======================================== */
 
 nav {
   width: 100%;
@@ -273,9 +238,6 @@ nav.scrolled {
   background-clip: text;
   font-family: San Francisco;
 }
-/* ========================================
-   Theme Toggle & Actions
-   ======================================== */
 
 .nav-actions {
   display: flex;
@@ -338,10 +300,6 @@ nav.scrolled {
   transform: translateX(4px);
 }
 
-/* ========================================
-   Burger Menu - Premium Animation
-   ======================================== */
-
 .burger {
   display: none;
   font-size: 26px;
@@ -357,11 +315,7 @@ nav.scrolled {
   position: relative;
   z-index: 1001;
 }
-/* ========================================
-   Fix Burger Menu & Mobile Navbar Behavior
-   ======================================== */
 
-/* Сделать navbar фиксированным сверху */
 nav {
   position: fixed;
   top: 0;
@@ -370,7 +324,6 @@ nav {
   z-index: 9999;
 }
 
-/* Мобильное меню overlay только под navbar */
 @media (max-width: 768px) {
   nav{
     margin-top: 0;
@@ -403,12 +356,10 @@ nav {
     opacity: 1;
   }
 
-  /* Отключаем скролл страницы при открытом меню */
   body.menu-open {
     overflow: hidden;
   }
 
-  /* Burger фиксирован сверху */
   .burger {
     position: fixed;
     top: 33px;
@@ -545,7 +496,6 @@ nav {
 [data-theme="dark"] .search-item:hover,
 .dark-theme .search-item:hover {
   background: rgba(255, 94, 20, 0.18);
-  /* transform: translateX(6px); */
 }
 [data-theme="dark"] .search-item img,
 .dark-theme .search-item img {
@@ -645,17 +595,6 @@ nav {
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.65);
   }
 }
-/* @media (max-width: 768px) {
-  nav ul li a {
-    border-radius: 14px;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    transition: 
-      background var(--transition-base),
-      transform var(--transition-base),
-      color var(--transition-base);
-  }
-} */
 @media (max-width: 768px) {
   [data-theme="light"] nav ul li a,
   .light-theme nav ul li a {
@@ -688,9 +627,7 @@ nav {
     transform: translateX(10px);
   }
 }
-/* ========================================
-   Mobile Overlay Navbar - Fullscreen, Premium
-   ======================================== */
+
 @media (max-width: 768px) {
   /* Overlay */
   nav ul {
@@ -773,7 +710,6 @@ nav {
     transition: all var(--transition-base);
   }
 
-/* ===== DESKTOP HARD FIX ===== */
 @media (min-width: 769px) {
 
   nav {
@@ -801,9 +737,6 @@ nav {
     display: none !important;
   }
 }
-
-
-
   nav select:hover,
   nav select:focus {
     background: rgba(255, 94, 20, 0.15);
@@ -941,14 +874,7 @@ nav {
   z-index: 1001;
 }
 
-/* .burger.active {
-  color: white !important;
-} */
-
 @media (max-width: 768px) {
-  /* body .menu-open {
-  overflow: hidden !important;
-} */
   .nav-actions {
     position: fixed;
     top: 20px;
@@ -965,10 +891,6 @@ nav {
   background: rgba(255, 94, 20, 0.2);
   color: var(--brand-primary) !important;
 }
-
-/* ========================================
-   Navigation Menu
-   ======================================== */
 
 nav ul {
   list-style: none;
@@ -1033,12 +955,6 @@ nav select:focus {
   border-color: var(--brand-primary);
   box-shadow: 0 0 0 3px rgba(255, 94, 20, 0.1);
 }
-
-
-
-/* ========================================
-   Responsive Navigation
-   ======================================== */
 
 @media (max-width: 768px) {
   nav {
@@ -1145,9 +1061,9 @@ nav select:focus {
   }
 
   nav ul li a {
-    font-size: 18px;
+    font-size: 16px;
     display: block;
-    padding: 16px 20px;
+    padding: 12px 14px;
     width: 100%;
     color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
@@ -1157,7 +1073,7 @@ nav select:focus {
   nav ul li a:hover {
     background: rgba(255, 94, 20, 0.15);
     color: var(--brand-primary);
-    transform: translateX(4px);
+    /* transform: translateX(4px); */
   }
 
   nav ul li a::after {
@@ -1207,7 +1123,7 @@ nav select:focus {
 .contact {
     width: 100%;
     text-align: center;
-    margin-top: 345px;
+    margin-top: 270px;
     border-radius: 11px;
     background-color: #fff ;
   }
@@ -1237,12 +1153,12 @@ nav select:focus {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all var(--transition-base);
+    /* transition: all var(--transition-base); */
   }
 
   .burger:hover {
     background: rgba(255, 94, 20, 0.25);
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
   }
 
   /* Кнопка темы слева */
@@ -1268,7 +1184,7 @@ nav select:focus {
 
   .theme-toggle:hover {
     background: rgba(255, 94, 20, 0.25);
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
   }
 
   /* Overlay не перекрывает nav-actions */

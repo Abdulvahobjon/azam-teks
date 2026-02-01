@@ -11,12 +11,17 @@ import translationKO from './locales/ko/translation.json';
 import translationZH from './locales/zh/translation.json';
 import translationTR from './locales/tr/translation.json';
 import translationUK from './locales/uk/translation.json';
+import translationKIRG from './locales/kirg/translation.json';
+import translationKAZ from './locales/kaz/translation.json';
+import translationTAJ from './locales/taj/translation.json';
 
 const resources = {
   uz: { translation: translationUZ },
   ru: { translation: translationRU },
   en: { translation: translationEN },
-  // Future languages can be easily added here:
+  kirg: { translation: translationKIRG },
+  kaz: { translation: translationKAZ },
+  taj: { translation: translationTAJ },
   fr: { translation: translationFR },
   ar: { translation: translationAR },
   ko: { translation: translationKO },

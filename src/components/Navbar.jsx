@@ -154,6 +154,9 @@ export default function Navbar() {
             <option value="uz">UZB</option>
             <option value="ru">RUS</option>
             <option value="en">ENG</option>
+            <option value="kaz">KAZ</option>
+            <option value="kirg">KIRG</option>
+            <option value="taj">TAJ</option>
             <option value="tr">TURK</option>
             <option value="fr">FRA</option>
             <option value="ar">ARAB</option>

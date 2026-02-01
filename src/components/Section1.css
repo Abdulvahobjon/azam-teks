@@ -71,7 +71,7 @@
 /* ================= MOBILE BUTTON ================= */
 .mobile-btn {
   display: none; /* скрыта на ПК */
-  margin-top: 20px;
+  margin-top: -15px !important;
   padding: 12px 24px;
   font-size: 16px;
   font-weight: 600;

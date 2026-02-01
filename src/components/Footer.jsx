@@ -34,7 +34,6 @@ export default function Footer() {
             <li><Link to="/loyihalar">{t("Loyihalar")}</Link></li>
             <li><Link to="/boglanish">{t("Bog'lanish")}</Link></li>
             <li><Link to="/mijozlarfikri">{t("Mijozlar fikri")}</Link></li>
-            <li><Link to="/manzil">{t("Manzil")}</Link></li>
           </ul>
         </div>
 

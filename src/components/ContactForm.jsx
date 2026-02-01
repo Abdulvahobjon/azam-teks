@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import "./ContactForm.css";
-import { useTranslation } from "react-i18next";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { useEffect, useState } from "react"
+import { useTranslation } from "react-i18next"
+import { toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+import "./ContactForm.css"
 
 export default function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
