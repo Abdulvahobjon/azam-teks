@@ -1,5 +1,14 @@
 import { useEffect } from 'react'
 import { useTranslation } from "react-i18next"
+import new10 from '../assets/product/new/Постельное Белье/AT-011.jpg'
+import new11 from '../assets/product/new/Постельное Белье/AT_001.jpg'
+import new12 from '../assets/product/new/Постельное Белье/AT_002.jpg'
+import new13 from '../assets/product/new/Постельное Белье/AT_004.jpg'
+import new14 from '../assets/product/new/Постельное Белье/AT_005.jpg'
+import new15 from '../assets/product/new/Постельное Белье/AT_006.jpg'
+import new16 from '../assets/product/new/Постельное Белье/AT_007_.jpg'
+import new17 from '../assets/product/new/Постельное Белье/AT_008.jpg'
+import new18 from '../assets/product/new/Постельное Белье/AT_010_.jpg'
 import service1 from '../assets/001.3.png'
 import service4 from '../assets/003.2.png'
 import service6 from '../assets/010.1.png'
@@ -78,12 +87,12 @@ import pol4 from '../assets/product/new/Нетканое полотно/polotno-
 
 
 export const services = [
-  { title: 'Постельное Белье',id:1, img: [service1, service3, service4, service6, new2,new3,new4,new5,new6,new7] },
+  { title: 'Постельное Белье',id:1, img: [new10 , new11, new12, new13, new14, new15, new16, new17, new18] },
   { title: 'Носовное платок',id:2, img: [service2, dasramol2,dasramol3,dasramol4,dasramol5,dasramol6,dasramol7,dasramol8,dasramol9,dasramol10,dasramol11,dasramol12,dasramol13,dasramol14,dasramol15,dasramol16,dasramol17]},
   { title: 'Постельное Белье',id:3, img: [service3, service1, service4, service6, new2,new3,new4,new5,new6,new7] },
   { title: 'Постельное Белье',id:4, img: [service1, service3, service4, service6, new2,new3,new4,new5,new6,new7] },
   { title: 'Европостель',id:5, img: [service5,matras2,matras3,matras4,matras5,matras6,matras7,matras8,matras9,matras10,matras11] },
-  { title: 'Постельное Белье',id:6, img: [service6, service3, service4, service1, new2,new3,new4,new5,new6,new7] },
+  { title: 'Постельное Белье',id:6, img: [new13,service6, service3, service4, service1, new2,new3,new4,new5,new6,new7] },
   { title: 'Бязь Отбеленное',id:7, img: [service7, byaz1, byaz2, byaz3, byaz4, byaz5] },
   { title: 'Бязь',id:8, img: [service8, baz1, baz2, baz3, baz4, baz5, baz6] },
   { title: 'Вафельное полотно',id:9, img: [service9, vafel1, vafel2, vafel3] },

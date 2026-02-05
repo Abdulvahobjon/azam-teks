@@ -49,12 +49,11 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>Copyright © 2026 AZAM TEKS. {t("All rights reserved.")}</p>
+        <p>Copyright © 2009 AZAM TEKS. {t("All rights reserved.")}</p>
         <div className="footer-policy">
           <Link to="/">{t("Privacy")}</Link> | <Link to="/">{t("Terms of Use")}</Link> | <Link to="/">{t("Cookies")}</Link>
         </div>
       </div>
-      
     </footer>
   );
 }
