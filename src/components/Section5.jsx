@@ -64,6 +64,14 @@ export default function ProjectsSection() {
   const handleClick = (project) => {
   navigate("/postelnoe", { state: { image: project.img } });
 };
+useEffect(() => {
+  if (window.innerWidth <= 768) {
+    Aos.init({
+      duration: 1000,
+      once: true
+    });
+  }
+}, []);
 
   useEffect(() => {
     const cards = document.querySelectorAll('.service-card');
