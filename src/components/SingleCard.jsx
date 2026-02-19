@@ -7,7 +7,6 @@ function SingleCard() {
   let { id } = useParams();
   let single = services.find((item) => item.id == id);
 
-  // Intersection Observer: fadeInUp animation
   useEffect(() => {
     const cards = document.querySelectorAll('.single-card-item');
     const observer = new IntersectionObserver(

@@ -43,7 +43,8 @@ import matras6 from '../assets/product/mattress/mattress_image_6.jpg'
 import matras7 from '../assets/product/mattress/mattress_image_7.jpg'
 import matras8 from '../assets/product/mattress/mattress_image_8.jpg'
 import matras9 from '../assets/product/mattress/mattress_image_9.jpg'
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 export const projects = [
@@ -89,7 +90,7 @@ export default function ProjectsSection() {
       <div className="services-grid">
         {projects.map((project, index) => (
           <div className="service-card" key={project.id} onClick={()=> navigate(`/card2/${project.id}`)}>
-            <div className="card-inner">
+            <div className="card-inner" data-aos="fade-up" data-aos-duration="2000">
               <img src={project.img[0]} alt={t(project.title)} />
               <h4>{t(project.title)}</h4>
             </div>

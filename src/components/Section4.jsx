@@ -1,4 +1,5 @@
-import { useEffect } from 'react'
+import React, { memo, useEffect } from 'react'
+import 'aos/dist/aos.css'
 import { useTranslation } from "react-i18next"
 import new10 from '../assets/product/new/Постельное Белье/AT-011.jpg'
 import new11 from '../assets/product/new/Постельное Белье/AT_001.jpg'
@@ -83,6 +84,7 @@ import pol1 from '../assets/product/new/Нетканое полотно/700-nw.j
 import pol2 from '../assets/product/new/Нетканое полотно/6865056497.jpg'
 import pol3 from '../assets/product/new/Нетканое полотно/orig.webp'
 import pol4 from '../assets/product/new/Нетканое полотно/polotno-netkanoe-beloe_1.800x600.jpg'
+import Aos from 'aos'
 
 
 
@@ -101,8 +103,12 @@ export const services = [
   { title: 'Нетканое полотно',id:12, img: [service12, pol1, pol2, pol3, pol4] },
 ];
 
-export default function ServicesSection() {
+function ServicesSection() {
   const { t } = useTranslation();
+  useEffect(() => {
+  Aos.init({ duration: 1000 });
+},[]);
+
 
     const handleClick = (service) => {
   navigate("/postelnoe", { state: { image: service.img } });
@@ -133,8 +139,8 @@ export default function ServicesSection() {
       <h3 className='class'>{t("Eng yaxshi xizmatlar")}</h3>
       <div className="services-grid">
         {services.map((service, index) => (
-          <div className="service-card" key={index} onClick={()=> navigate(`/card/${service.id}`)}>
-            <div className="card-inner">
+          <div className="service-card" key={index} onClick={()=> navigate(`/card/${service.id}`)} >
+            <div className="card-inner" data-aos="fade-up" data-aos-duration="2000">
               <img src={service.img[0]} alt={t(service.title)} />
               <h4>{t(service.title)}</h4>
             </div>
@@ -145,3 +151,4 @@ export default function ServicesSection() {
     
   );
 }
+export default React.memo(ServicesSection)
