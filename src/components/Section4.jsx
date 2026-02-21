@@ -109,7 +109,7 @@ function ServicesSection() {
   if (window.innerWidth <= 768) {
     Aos.init({
       duration: 1000,
-      once: true
+      // once: false
     });
   }
 }, []);
@@ -146,7 +146,7 @@ function ServicesSection() {
       <div className="services-grid">
         {services.map((service, index) => (
           <div className="service-card" key={index} onClick={()=> navigate(`/card/${service.id}`)} >
-            <div className="card-inner" data-aos="fade-up" data-aos-duration="2000">
+            <div className="card-inner" data-aos="zoom-in" data-aos-duration="2000">
               <img src={service.img[0]} alt={t(service.title)} />
               <h4>{t(service.title)}</h4>
             </div>

@@ -98,7 +98,7 @@ useEffect(() => {
       <div className="services-grid">
         {projects.map((project, index) => (
           <div className="service-card" key={project.id} onClick={()=> navigate(`/card2/${project.id}`)}>
-            <div className="card-inner" data-aos="fade-up" data-aos-duration="2000">
+            <div className="card-inner" data-aos="zoom-in" data-aos-duration="2000">
               <img src={project.img[0]} alt={t(project.title)} />
               <h4>{t(project.title)}</h4>
             </div>
