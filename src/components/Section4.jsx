@@ -105,13 +105,11 @@ export const services = [
 
 function ServicesSection() {
   const { t } = useTranslation();
+  
   useEffect(() => {
-  if (window.innerWidth <= 768) {
-    Aos.init({
-      duration: 1000,
-      // once: false
-    });
-  }
+  Aos.init({
+    duration: 1000,
+  });
 }, []);
 
 
