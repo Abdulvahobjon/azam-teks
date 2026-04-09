@@ -89,6 +89,16 @@
   "Tozalash va tayyorlash": "Temizleme ve Hazırlık",
   "Paxta tozalash va tayyorlash jarayonlari": "Pamuk temizleme ve hazırlık süreçleri",
     "Qidiruv...": "Ara...",
+    "made": {
+    "title": "Üretim Süreci",
+    "desc": "Modern teknolojiler kullanarak üretiyoruz",
+    "step1": "Pamuk hazırlama",
+    "step2": "İplik eğirme",
+    "step3": "Kumaş dokuma",
+    "step4": "Beyazlatma",
+    "step5": "Kalite kontrol",
+    "btn": "Sipariş Ver"
+  },
   "Ishlab chiqarish": "Üretim",
   "Paxta urug’ini ekish va yig’ish": "Pamuk ekimi ve hasadı",
   "Paxta tozalash zavodi": "Pamuk temizleme tesisi",

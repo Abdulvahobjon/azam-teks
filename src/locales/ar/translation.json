@@ -6,6 +6,16 @@
   "Bog'lanish": "اتصل بنا",
   "Mijozlar fikri": "آراء العملاء",
   "Manzil": "العنوان",
+  "made": {
+    "title": "عملية الإنتاج",
+    "desc": "ننتج باستخدام التقنيات الحديثة",
+    "step1": "تحضير القطن",
+    "step2": "غزل الخيوط",
+    "step3": "نسج القماش",
+    "step4": "التبييض",
+    "step5": "مراقبة الجودة",
+    "btn": "قم بالطلب"
+  },
   "Bizning ijtimoiy tarmoqlar": "وسائل التواصل الاجتماعي الخاصة بنا",
   "Sifatli materiallar": "مواد عالية الجودة",
   "Har bir mahsulot uchun eng yuqori sifatli materiallarni tanladik, sizning ehtiyojlaringizni qondirish uchun.": "لقد اخترنا أفضل المواد لكل منتج لتلبية احتياجاتك.",

@@ -85,6 +85,16 @@
   "Bizning mahsulotlarimiz xalqaro standartlarga javob beradi. Har bir bosqichda qat’iy sifat nazorati o'tkaziladi.": "Биздин продуктылар эл аралык стандарттарга жооп берет. Ар бир этапта катуу сапатты контролдоо жүргүзүлөт.",
   "Har bir bosqichda sifat nazorati va 100% paxta materiallari ishlatiladi.": "Ар бир этапта сапатты контролдоо жана 100% пахта материалдары колдонулат.",
   "Bizning ishlab chiqarish jarayonimiz zamonaviy va samarali. Har bir bosqich ehtiyotkorlik bilan nazorat qilinadi va eng yaxshi natijalarni ta’minlaydi.": "Биздин өндүрүш процессибиз заманбап жана натыйжалуу. Ар бир этап кылдаттык менен көзөмөлдөнөт жана мыкты натыйжаларды камсыз кылат.",
+  "made": {
+    "title": "Өндүрүш процесси",
+    "desc": "Заманбап технологиялар колдонулуп өндүрүлөт",
+    "step1": "Жүгөрү даярдоо",
+    "step2": "Иптерди жиптөө",
+    "step3": "Ткань тоқу",
+    "step4": "Ак кылуу",
+    "step5": "Сапатты текшерүү",
+    "btn": "Буйрутма берүү"
+  },
   "Eng yaxshi paxta navlarini tanlaymiz.": "Эң мыкты пахта түрлөрүн тандайбыз.",
   "Paxta tozalash va tayyorlash jarayonlari.": "Пахтаны тазалоо жана даярдоо процесстери.",
   "Zamonaviy dastgohlar yordamida to’quv.": "Заманбап машиналар менен токуу.",

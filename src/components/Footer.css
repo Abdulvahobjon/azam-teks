@@ -1,7 +1,3 @@
-/* ========================================
-   Footer - Premium Corporate Design
-   ======================================== */
-
 .footer {
   background: linear-gradient(135deg, var(--brand-dark) 0%, rgb(5, 20, 50) 100%);
   color: #ffffff;
@@ -10,7 +6,6 @@
   position: relative;
   overflow: hidden;
 }
-
 .footer::before {
   content: '';
   position: absolute;
@@ -21,7 +16,6 @@
   background: linear-gradient(90deg, transparent, var(--brand-primary), transparent);
   opacity: 0.3;
 }
-
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -34,35 +28,19 @@
 }
 .footer-section.contact {
   background: gradient(150deg, var(--brand-dark) 0%, rgb(5, 20, 50) 100%);
-  /* height: 100px; */
   margin-top: 10px;
-
-  /* background: var(--brand-dark); */
-
-  /* flex: 1 1 250px; */
-  /* min-width: 220px; */
 }
 .footer-section.contact .contact {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-/* .footer-section.contact span,
-.footer-section.contact a {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  transition: all var(--transition-base);
-} */
 .contact h4{
   text-align: start;
 }
 .contact p{
   text-align: start;
 }
-
 .contact span,
 .contact a {
   display: flex;
@@ -73,14 +51,12 @@
   transition: all var(--transition-base);
   margin-bottom: 10px;
 }
-
 .contact span:hover,
 .contact a:hover {
   color: var(--brand-primary);
   transform: translateX(4px);
   opacity: 1;
 }
-
 .contact svg {
   font-size: 14px;
 }
@@ -88,7 +64,6 @@
   flex: 1 1 250px;
   min-width: 220px;
 }
-
 .footer-section h4 {
   font-size: 18px;
   margin-bottom: 24px;
@@ -98,7 +73,6 @@
   position: relative;
   padding-bottom: 12px;
 }
-
 .footer-section h4::after {
   content: '';
   position: absolute;
@@ -109,16 +83,13 @@
   background: var(--brand-primary);
   border-radius: 2px;
 }
-
 .footer-section ul {
   list-style: none;
   padding: 0;
 }
-
 .footer-section ul li {
   margin-bottom: 12px;
 }
-
 .footer-section ul li a {
   color: rgba(255, 255, 255, 0.8);
   transition: all var(--transition-base);
@@ -126,24 +97,20 @@
   display: inline-block;
   padding: 4px 0;
 }
-
 .footer-section ul li a:hover {
   color: var(--brand-primary);
   transform: translateX(6px);
 }
-
 .footer-section.contact p {
   margin-bottom: 16px;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.7;
 }
-
 .social-icons {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
 }
-
 .social-icons a {
   font-size: 24px;
   transition: all var(--transition-base);
@@ -157,7 +124,6 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .social-icons a:hover {
   color: var(--brand-primary);
   background: rgba(255, 94, 20, 0.15);
@@ -165,7 +131,6 @@
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 4px 12px rgba(255, 94, 20, 0.2);
 }
-
 .footer-bottom {
   margin-top: 50px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -182,11 +147,9 @@
   position: relative;
   z-index: 1;
 }
-
 .footer-bottom p {
   margin: 5px 0;
 }
-
 .footer-policy {
   display: flex;
   gap: 8px;
@@ -194,7 +157,6 @@
 }
 .footer-bottom p{
   color: rgba(255, 255, 255, 0.6);
-
 }
 .footer-policy a {
   color: rgba(255, 255, 255, 0.7);
@@ -202,69 +164,53 @@
   padding: 4px 8px;
   border-radius: 4px;
 }
-
 .footer-policy a:hover {
   color: var(--brand-primary);
   background: rgba(255, 94, 20, 0.1);
 }
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .footer {
     padding: 50px 5% 24px;
   }
-
   .footer-container {
     flex-direction: column;
     gap: 40px;
   }
-
   .footer-section {
     width: 100%;
   }
-
   .footer-bottom {
     flex-direction: column;
     gap: 16px;
     text-align: center;
     padding-top: 24px;
   }
-
   .footer-policy {
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .social-icons {
     justify-content: flex-start;
   }
 }
-
-/* ========================================
-   Footer - Dark Theme
-   ======================================== */
 [data-theme="dark"] .footer,
 .dark .footer {
   background: linear-gradient(135deg, #020d26 0%, #050f32 100%);
   color: rgba(255, 255, 255, 0.9);
 }
-
 [data-theme="dark"] .footer::before,
 .dark .footer::before {
   background: linear-gradient(90deg, transparent, rgba(255, 94, 20, 0.8), transparent);
   opacity: 0.2;
 }
-
 [data-theme="dark"] .footer-section h4,
 .dark .footer-section h4 {
   color: #ffffff;
 }
-
 [data-theme="dark"] .footer-section h4::after,
 .dark .footer-section h4::after {
   background: rgba(255, 94, 20, 0.9);
 }
-
 [data-theme="dark"] .footer-section ul li a,
 .dark .footer-section ul li a,
 [data-theme="dark"] .contact span,
@@ -273,7 +219,6 @@
 .dark .contact a {
   color: rgba(255, 255, 255, 0.75);
 }
-
 [data-theme="dark"] .footer-section ul li a:hover,
 .dark .footer-section ul li a:hover,
 [data-theme="dark"] .contact span:hover,
@@ -282,14 +227,12 @@
 .dark .contact a:hover {
   color: rgba(255, 94, 20, 0.95);
 }
-
 [data-theme="dark"] .social-icons a,
 .dark .social-icons a {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.75);
 }
-
 [data-theme="dark"] .social-icons a:hover,
 .dark .social-icons a:hover {
   color: rgba(255, 94, 20, 0.95);
@@ -297,18 +240,15 @@
   border-color: rgba(255, 94, 20, 0.3);
   box-shadow: 0 4px 12px rgba(255, 94, 20, 0.2);
 }
-
 [data-theme="dark"] .footer-bottom,
 .dark .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.6);
 }
-
 [data-theme="dark"] .footer-policy a,
 .dark .footer-policy a {
   color: rgba(255, 255, 255, 0.6);
 }
-
 [data-theme="dark"] .footer-policy a:hover,
 .dark .footer-policy a:hover {
   color: rgba(255, 94, 20, 0.95);

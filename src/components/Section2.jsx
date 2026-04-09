@@ -4,10 +4,8 @@ import expertImg from '../assets/02.png';
 import deliveryImg from '../assets/03.png';
 import './Section2.css';
 import { useTranslation } from "react-i18next";
-
 export default function FeaturesTable() {
   const { t } = useTranslation();
-
   useEffect(() => {
     const features = document.querySelectorAll('.feature');
     const observer = new IntersectionObserver(
@@ -25,7 +23,6 @@ export default function FeaturesTable() {
     features.forEach((feature) => observer.observe(feature));
     return () => features.forEach((feature) => observer.unobserve(feature));
   }, []);
-
   return (
     <div className="features-table">
       <div className="feature">
@@ -36,7 +33,6 @@ export default function FeaturesTable() {
         </div>
       </div>
       <div className="divider"></div>
-
       <div className="feature">
         <img src={expertImg} alt={t("Ekspertlar jamoasi")} />
         <div className="feature-text">
@@ -45,7 +41,6 @@ export default function FeaturesTable() {
         </div>
       </div>
       <div className="divider"></div>
-
       <div className="feature">
         <img src={deliveryImg} alt={t("O'z vaqtida yetkazib berish")} />
         <div className="feature-text">

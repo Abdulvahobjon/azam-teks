@@ -13,14 +13,9 @@ import SingleCard2 from "./components/SingleCard2.jsx"
 import MijozlarFikri from './components/Mijozlarfikri.jsx'
 import Footer from './components/Footer.jsx'
 import { toast, ToastContainer } from 'react-toastify'
-
-
-
-
+import Made from './components/made.jsx'
 function App() {
   const location = useLocation();
-
-  // Smooth scroll to top on route change
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -28,7 +23,6 @@ function App() {
       behavior: 'smooth'
     });
   }, [location.pathname]);
-
   return (
     <div className="page-transition">
       <Loader/>
@@ -36,6 +30,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Boshsahifa/>}/>
         <Route path='/bizhaqimizda' element={<Bizhaqimizda/>}/>
+        <Route path='/made' element={<Made/>}/>
         <Route path='/xizmatlar' element={<Xizmatlar/>}/>
         <Route path='/loyihalar' element={<Loyihalar/>}/>
         <Route path='/boglanish' element={<Boglanish/>}/>
@@ -55,10 +50,8 @@ function App() {
   pauseOnHover
   theme="dark"
 />
-
       <Footer/>
     </div>
   )
 }
-
 export default App

@@ -8,12 +8,10 @@
   align-items: center;
   z-index: 9999;
 }
-
 .loader {
   display: flex;
   gap: 15px;
 }
-
 .circle {
   width: 15px;
   height: 15px;
@@ -21,20 +19,16 @@
   border-radius: 50%;
   animation: bounce 0.6s infinite alternate;
 }
-
 .circle:nth-child(2) {
   animation-delay: 0.2s;
 }
-
 .circle:nth-child(3) {
   animation-delay: 0.4s;
 }
-
 @keyframes bounce {
   0% { transform: translateY(0); opacity: 0.3; }
   100% { transform: translateY(-20px); opacity: 1; }
 }
-
 .loader-text {
   margin-top: 20px;
   color: #fff;

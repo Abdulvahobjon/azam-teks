@@ -92,6 +92,16 @@
   "Yuqori sifatli bo'yash va qayta ishlash": "Високоякісне фарбування та обробка",
   "Tikuv va tayyor mahsulot": "Шиття та готова продукція",
   "Tikuvchilik va yakuniy mahsulot tayyorlash": "Швейне виробництво та фінальна підготовка продукції",
+  "made": {
+    "title": "Процес виробництва",
+    "desc": "Виробляємо з використанням сучасних технологій",
+    "step1": "Підготовка бавовни",
+    "step2": "Прядіння ниток",
+    "step3": "Ткацтво тканини",
+    "step4": "Вибілювання",
+    "step5": "Контроль якості",
+    "btn": "Зробити замовлення"
+  },
   "Mijozlarimiz fikrlari": "Відгуки наших клієнтів",
   "Ishlab chiqarish": "Виробництво",
   "Paxta urug’ini ekish va yig’ish": "Посадка та збір бавовни",

@@ -22,7 +22,6 @@ import service9 from '../assets/204363521_w640_h640_204363521.jpg'
 import service12 from '../assets/2bff21cf93dba1dd8be84e252d4fbb92.jpg'
 import service2 from '../assets/handkerchiefs_image_1.jpg'
 import service5 from '../assets/mattress_image_1.jpg'
-// import new1 from '../assets/product/new/Постельное Белье/01.png'
 import { useNavigate } from 'react-router-dom'
 import dasramol10 from '../assets/product/handkerchiefs/handkerchiefs_image_10.jpg'
 import dasramol11 from '../assets/product/handkerchiefs/handkerchiefs_image_11.jpg'
@@ -85,9 +84,6 @@ import pol2 from '../assets/product/new/Нетканое полотно/68650564
 import pol3 from '../assets/product/new/Нетканое полотно/orig.webp'
 import pol4 from '../assets/product/new/Нетканое полотно/polotno-netkanoe-beloe_1.800x600.jpg'
 import Aos from 'aos'
-
-
-
 export const services = [
   { title: 'Постельное Белье',id:1, img: [new10 , new11, new12, new13, new14, new15, new16, new17, new18] },
   { title: 'Носовное платок',id:2, img: [service2, dasramol2,dasramol3,dasramol4,dasramol5,dasramol6,dasramol7,dasramol8,dasramol9,dasramol10,dasramol11,dasramol12,dasramol13,dasramol14,dasramol15,dasramol16,dasramol17]},
@@ -102,24 +98,16 @@ export const services = [
   { title: 'Марли',id:11, img: [service11, mar1, mar2, mar3, mar4] },
   { title: 'Нетканое полотно',id:12, img: [service12, pol1, pol2, pol3, pol4] },
 ];
-
 function ServicesSection() {
   const { t } = useTranslation();
-  
-  useEffect(() => {
+    useEffect(() => {
   Aos.init({
     duration: 1000,
   });
 }, []);
-
-
-
     const handleClick = (service) => {
   navigate("/postelnoe", { state: { image: service.img } });
 };
-
-
-
   useEffect(() => {
     const cards = document.querySelectorAll('.service-card');
     const observer = new IntersectionObserver(
@@ -135,8 +123,7 @@ function ServicesSection() {
     cards.forEach((card) => observer.observe(card));
     return () => cards.forEach((card) => observer.unobserve(card));
   }, []);
-  
-  let navigate = useNavigate()
+    let navigate = useNavigate()
   return (
     <section className="projects-section"> 
       <h2>{t("Xizmatlar")}</h2>
@@ -152,7 +139,6 @@ function ServicesSection() {
         ))}
       </div>
     </section>
-    
-  );
+      );
 }
 export default React.memo(ServicesSection)

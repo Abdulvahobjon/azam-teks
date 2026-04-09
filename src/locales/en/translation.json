@@ -65,6 +65,16 @@
   "AZAM TEKS": "AZAM TEKS",
   "Why Choose Us": "Why Choose Us",
   "Yopish": "Close",
+  "made": {
+    "title": "Production Process",
+    "desc": "Manufactured using modern technologies",
+    "step1": "Cotton preparation",
+    "step2": "Spinning threads",
+    "step3": "Weaving fabric",
+    "step4": "Bleaching",
+    "step5": "Quality control",
+    "btn": "Place order"
+  },
   "Tun rejimi": "Dark Mode",
   "Kun rejimi": "Light Mode",
   "Mijozlarimiz fikrlari": "Our Clients' Reviews",

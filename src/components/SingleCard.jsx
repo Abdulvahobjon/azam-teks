@@ -2,11 +2,9 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { services } from './Section4'
 import './SingleCard.css'
-
 function SingleCard() {
   let { id } = useParams();
   let single = services.find((item) => item.id == id);
-
   useEffect(() => {
     const cards = document.querySelectorAll('.single-card-item');
     const observer = new IntersectionObserver(
@@ -22,9 +20,7 @@ function SingleCard() {
     cards.forEach((card) => observer.observe(card));
     return () => cards.forEach((card) => observer.unobserve(card));
   }, [single]);
-
   if (!single) return <p>Mahsulot topilmadi</p>;
-
   return (
     <section className="single-card-section">
       <h2 className="single-card-title">{single.title}</h2>
@@ -44,5 +40,4 @@ function SingleCard() {
     </section>
   );
 }
-
 export default SingleCard;

@@ -46,7 +46,7 @@ import matras9 from '../assets/product/mattress/mattress_image_9.jpg'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
-
+// eslint-disable-next-line react-refresh/only-export-components
 export const projects = [
   { title: 'Носовное платок',id:1, img: [project1, dasramol2,dasramol3,dasramol4,dasramol5,dasramol6,dasramol7,dasramol8,dasramol9,dasramol10,dasramol11,dasramol12,dasramol13,dasramol14,dasramol15,dasramol16,dasramol17] },
   { title: 'Постельное Белье',id:2, img: [project2,new2,new3,new4,new5,new6,new7] },
@@ -58,12 +58,9 @@ export const projects = [
   { title: 'Носовное платок',id:8, img: [project8, dasramol2,dasramol3,dasramol4,dasramol5,dasramol6,dasramol7,dasramol8,dasramol9,dasramol10,dasramol11,dasramol12,dasramol13,dasramol14,dasramol15,dasramol16,dasramol17] },
   { title: 'Головной платок',id:9, img: [project9, dasramol2,dasramol3,dasramol4,dasramol5,dasramol6,dasramol7,dasramol8,dasramol9,dasramol10,dasramol11,dasramol12,dasramol13,dasramol14,dasramol15,dasramol16,dasramol17] },
 ];
-
 export default function ProjectsSection() {
   const { t } = useTranslation();
-  const handleClick = (project) => {
-  navigate("/postelnoe", { state: { image: project.img } });
-};
+
 useEffect(() => {
   if (window.innerWidth <= 768) {
     Aos.init({
@@ -72,7 +69,6 @@ useEffect(() => {
     });
   }
 }, []);
-
   useEffect(() => {
     const cards = document.querySelectorAll('.service-card');
     const observer = new IntersectionObserver(
@@ -88,15 +84,13 @@ useEffect(() => {
     cards.forEach((card) => observer.observe(card));
     return () => cards.forEach((card) => observer.unobserve(card));
   }, []);
-
-  let navigate = useNavigate()
-
+  const navigate = useNavigate()
   return (
     <section className="projects-section">
       <h2>{t("Loyihalar")}</h2>
       <h3 className='class'>{t("Bizning mahsulotlar")}</h3>
       <div className="services-grid">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div className="service-card" key={project.id} onClick={()=> navigate(`/card2/${project.id}`)}>
             <div className="card-inner" data-aos="zoom-in" data-aos-duration="2000">
               <img src={project.img[0]} alt={t(project.title)} />

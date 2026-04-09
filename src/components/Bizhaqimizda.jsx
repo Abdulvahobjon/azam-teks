@@ -2,12 +2,8 @@ import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import "./Bizhaqimizda.css";
 import Section3 from './Section3'
-// import FactorySections from './FactorySections.jsx'
-
-
 export default function Production() {
   const { t } = useTranslation();
-
   const productionBlocks = [
     {
       number: "1",
@@ -86,7 +82,6 @@ export default function Production() {
       description: t("Tikuvchilik va yakuniy mahsulot tayyorlash."),
     },
   ];
-
   useEffect(() => {
     const cards = document.querySelectorAll(".card");
     const observer = new IntersectionObserver(
@@ -99,15 +94,12 @@ export default function Production() {
       },
       { threshold: 0.2 }
     );
-
     cards.forEach((card) => observer.observe(card));
   }, []);
-
   return (
 		<>
 		<Section3/>
-    {/* <FactorySections/> */}
-    <section className="production">
+        <section className="production">
       <div className="container">
         <h2 className="section-title">{t("Ishlab chiqarish")}</h2>
         <div className="cards">

@@ -1,7 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-
 import translationUZ from './locales/  uz/translation.json';
 import translationRU from './locales/ru/translation.json';
 import translationEN from './locales/en/translation.json';
@@ -14,7 +13,6 @@ import translationUK from './locales/uk/translation.json';
 import translationKIRG from './locales/kirg/translation.json';
 import translationKAZ from './locales/kaz/translation.json';
 import translationTAJ from './locales/taj/translation.json';
-
 const resources = {
   uz: { translation: translationUZ },
   ru: { translation: translationRU },
@@ -29,13 +27,12 @@ const resources = {
   tr: { translation: translationTR },
   uk: { translation: translationUK },
 };
-
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
-    lng: "uz", // Set default language to UZB
+    lng: "uz", 
     fallbackLng: "uz",
     debug: false,
     interpolation: { escapeValue: false },
@@ -45,5 +42,4 @@ i18n
       lookupLocalStorage: 'i18nextLng',
     },
   });
-
 export default i18n;

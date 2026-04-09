@@ -10,7 +10,6 @@ import ContactForm from './ContactForm'
 import './Navbar.css'
 import { services } from './Section4.jsx'
 import { projects } from './Section5.jsx'
-
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -19,16 +18,12 @@ export default function Navbar() {
   const [searchResults, setSearchResults] = useState([]);
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-  
-
-  // Initialize theme
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'light';
     setTheme(savedTheme);
     document.documentElement.setAttribute('data-theme', savedTheme);
     document.body.setAttribute('data-theme', savedTheme);
   }, []);
-
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
@@ -36,30 +31,25 @@ export default function Navbar() {
     document.documentElement.setAttribute('data-theme', newTheme);
     document.body.setAttribute('data-theme', newTheme);
   };
-
   const toggleMenu = () => setMenuOpen(!menuOpen);
-
-  // Scroll effect for navbar
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // Prevent body scroll on mobile menu open
   useEffect(() => {
-    document.body.style.overflow = (menuOpen && window.innerWidth <= 768) ? 'hidden' : 'unset';
+    if (menuOpen && window.innerWidth <= 768) {
+      document.body.classList.add('menu-open');
+      document.documentElement.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+      document.documentElement.classList.remove('menu-open');
+    }
+    return () => {
+      document.body.classList.remove('menu-open');
+      document.documentElement.classList.remove('menu-open');
+    };
   }, [menuOpen]);
-
-  
-  useEffect(() => {
-  if (menuOpen) {
-    document.body.classList.add('menu-open');
-  } else {
-    document.body.classList.remove('menu-open');
-  }
-}, [menuOpen]);
-  // Handle search input
   useEffect(() => {
     if (!searchTerm) {
       setSearchResults([]);
@@ -71,7 +61,6 @@ export default function Navbar() {
     );
     setSearchResults(results);
   }, [searchTerm, i18n.language]);
-
   const handleNavigate = (id) => {
     setMenuOpen(false);
     navigate(`/card/${id}`);
@@ -79,7 +68,6 @@ export default function Navbar() {
     setSearchTerm('');
     setSearchResults([]);
   };
-
   return (
     <>
     <div id='scrolbar' className={scrolled ? 'scrolled' : ''}>
@@ -96,32 +84,13 @@ export default function Navbar() {
         </div>
       </div>
     </div>
-      
-
-      <nav className={scrolled ? 'scrolled' : ''}>
+            <nav className={scrolled ? 'scrolled' : ''}>
           <Link to={"/"} >
-
-        <div className="name">
+        <div className={`name ${menuOpen ? 'active' : ''}`}>
             <img src={logo} alt="Logo" width={80} />
             <h2>AZAM TEKS</h2>
-          
-        </div>
+                  </div>
           </Link>
-
-
-        <div className="nav-actions">
-  <div className={`burger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-    {menuOpen ? <FaTimes /> : <FaBars className='close' />}
-  </div>
-  <button 
-    className="theme-toggle" 
-    onClick={toggleTheme}
-    aria-label={theme === 'light' ? "Тёмный режим" : "Светлый режим"}
-  >
-    {theme === 'light' ? <MdDarkMode /> : <MdLightMode />}
-  </button>
-</div>
-
         <ul className={menuOpen ? 'active' : ''}>
           <li><Link to={"/"} onClick={() => setMenuOpen(false)}>{t("Bosh sahifa")}</Link></li>
           <li><Link to={"/bizhaqimizda"} onClick={() => setMenuOpen(false)}>{t("Biz haqimizda")}</Link></li>
@@ -129,7 +98,6 @@ export default function Navbar() {
           <li><Link to={"/loyihalar"} onClick={() => setMenuOpen(false)}>{t("Loyihalar")}</Link></li>
           <li><Link to={"/boglanish"} onClick={() => setMenuOpen(false)}>{t("Bog'lanish")}</Link></li>
           <li><Link to={"/mijozlarfikri"} onClick={() => setMenuOpen(false)}>{t("Mijozlar fikri")}</Link></li>
-
           <div className="search-wrapper">
             <input 
               type="text" 
@@ -149,7 +117,6 @@ export default function Navbar() {
               </div>
             )}
           </div>
-
           <select onChange={(e) => i18n.changeLanguage(e.target.value)} value={i18n.language}>
             <option value="uz">UZB</option>
             <option value="ru">RUS</option>
@@ -166,6 +133,18 @@ export default function Navbar() {
           </select>
           <li className='contact'><ContactForm/></li>
         </ul>
+        <div className="nav-actions">
+          <button 
+            className={`theme-toggle ${menuOpen ? 'active' : ''}`} 
+            onClick={toggleTheme}
+            aria-label={theme === 'light' ? "Тёмный режим" : "Светлый режим"}
+          >
+            {theme === 'light' ? <MdDarkMode /> : <MdLightMode />}
+          </button>
+          <div className={`burger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+            {menuOpen ? <FaTimes /> : <FaBars className='close' />}
+          </div>
+        </div>
       </nav>
     </>
   );

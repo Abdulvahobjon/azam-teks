@@ -52,6 +52,16 @@
   "Kompaniya 2009 yilda tashkil etilgan bo'lib, 100% paxta mahsulotlarini ishlab chiqarishga ixtisoslashgan. Eng yangi texnologiyalar va mahsulotlar sifatiga pul tikadi. Qattiq va bo'yalgan paxta iplari, bosma va to'quv matolari va tayyor mahsulotlar ishlab chiqaradi.": "Компания была основана в 2009 году, специализируется на производстве 100% хлопковых изделий. Инвестирует в новейшие технологии и качество продукции. Производит жесткие и крашеные хлопковые нити, печатные и тканые материалы и готовую продукцию.",
   "Korxonada 50 ta JX90A-260CM AIR JET LOOMS (Xitoy) dastgohlari o'rnatilgan. Terri va vafli mahsulotlari korxonasining yillik ishlab chiqarish quvvati: 2400 tonna Tuval, oyiga 200 tonna sochiq, tikuvchilik korxonasi (Germaniya) - yiliga 1650 tonna tayyor mahsulot. Biz jadal rivojlanayotgan kompaniyamiz.": "На предприятии установлено 50 станков JX90A-260CM AIR JET LOOMS (Китай). Годовая производственная мощность предприятия изделий Terri и вафельных: 2400 тонн Полотно, 200 тонн платков в месяц, швейное предприятие (Германия) - 1650 тонн готовой продукции в год. Мы быстро развивающаяся компания.",
   "Eng yaxshi xizmatlar": "Лучшие услуги",
+  "made": {
+    "title": "Процесс производства",
+    "desc": "Производим с использованием современных технологий",
+    "step1": "Подготовка хлопка",
+    "step2": "Прядение нитей",
+    "step3": "Ткачество ткани",
+    "step4": "Отбеливание",
+    "step5": "Контроль качества",
+    "btn": "Сделать заказ"
+  },
   "Постельное Белье": "Постельное белье",
   "Носовное платок": "Носовой платок",
   "Европостель": "Европостель",

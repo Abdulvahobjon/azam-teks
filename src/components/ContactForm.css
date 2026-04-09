@@ -1,8 +1,3 @@
-/* ========================================
-   Contact Form - Premium Modal Design
-   ======================================== */
-
-/* ================= OVERLAY ================= */
 .overlay {
   position: fixed;
   top: 0;
@@ -26,12 +21,9 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
-
 .overlay.show {
   opacity: 1;
 }
-
-/* ================= MODAL ================= */
 .formMessage {
   background: var(--bg-white);
   width: 100%;
@@ -39,7 +31,6 @@
   padding: 40px 32px;
   border-radius: 24px;
   position: relative;
-  /* margin: auto; */
   transform: translateY(30px) scale(0.95);
   opacity: 0;
   animation: popUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
@@ -50,12 +41,10 @@
   transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
   margin-top: 100px !important;
 }
-
 .formMessage.show {
   transform: translateY(0) scale(1);
   opacity: 1;
 }
-
 .formMessage h3 {
   margin-bottom: 24px;
   text-align: center;
@@ -64,8 +53,6 @@
   color: var(--brand-dark);
   letter-spacing: -0.02em;
 }
-
-/* ================= CLOSE BUTTON ================= */
 .close-btn {
   position: absolute;
   top: 16px;
@@ -84,13 +71,11 @@
   transition: all var(--transition-base);
   padding: 0;
 }
-
 .close-btn:hover {
   background: rgba(255, 94, 20, 0.1);
   color: var(--brand-primary);
   transform: rotate(90deg);
 }
-
 .nav-btn {
   width: auto;
   padding: 10px 20px;
@@ -105,7 +90,6 @@
   letter-spacing: 0.3px;
   white-space: nowrap;
 }
-
 .nav-btn:hover {
   background: var(--brand-primary);
   color: #fff;
@@ -113,12 +97,9 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 94, 20, 0.3);
 }
-
 .nav-btn:active {
   transform: translateY(0);
 }
-
-/* Floating bot style for mobile */
 @media (max-width: 768px) {
   .nav-btn {
     position: fixed;
@@ -131,7 +112,6 @@
     font-size: 14px;
     animation: pulse 2s ease-in-out infinite;
   }
-
   @keyframes pulse {
     0%, 100% {
       box-shadow: 0 8px 24px rgba(2, 13, 38, 0.4);
@@ -141,8 +121,6 @@
     }
   }
 }
-
-/* ================= INPUTS & TEXTAREA ================= */
 .formMessage input,
 .formMessage textarea,
 .formMessage select {
@@ -158,18 +136,15 @@
   color: var(--text-primary);
   transition: all var(--transition-base);
 }
-
 .formMessage input::placeholder,
 .formMessage textarea::placeholder {
   color: var(--text-secondary);
 }
-
 .formMessage textarea {
   resize: none;
   height: 100px;
   font-family: 'Inter', sans-serif;
 }
-
 .formMessage input:focus,
 .formMessage textarea:focus,
 .formMessage select:focus {
@@ -177,20 +152,16 @@
   box-shadow: 0 0 0 3px rgba(255, 94, 20, 0.1);
   background: var(--bg-white);
 }
-
 [data-theme="dark"] .formMessage input:focus,
 [data-theme="dark"] .formMessage textarea:focus,
 [data-theme="dark"] .formMessage select:focus {
   background: var(--bg-light);
 }
-
 .formMessage input:hover,
 .formMessage textarea:hover,
 .formMessage select:hover {
   border-color: rgba(2, 13, 38, 0.2);
 }
-
-/* ================= SUBMIT BUTTON ================= */
 .submit-btn {
   margin-top: 24px;
   width: 100%;
@@ -206,23 +177,18 @@
   letter-spacing: 0.3px;
   box-shadow: 0 4px 12px rgba(255, 94, 20, 0.25);
 }
-
 .submit-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 94, 20, 0.35);
   filter: brightness(1.05);
 }
-
 .submit-btn:active {
   transform: translateY(0);
 }
-
-/* ================= ANIMATIONS ================= */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
 @keyframes popUp {
   from {
     transform: scale(0.92) translateY(10px);
@@ -234,48 +200,38 @@
   }
 }
 @media (max-width: 768px) {
-  /* body{
-    overflow: hidden;
-  } */
   .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 80vh;       /* ключ: занимает весь экран */
+    height: 80vh;       
     min-height: 88vh;
     display: flex;
     justify-content: center;
-    align-items: center;  /* центрируем модалку */
-    padding: 0;           /* убираем padding сверху */
-    overflow: hidden;     /* больше нет скролла, overlay закрывает весь экран */
-    background: rgba(2, 13, 38, 0.95); /* фон полностью */
+    align-items: center;  
+    padding: 0;           
+    overflow: hidden;     
+    background: rgba(2, 13, 38, 0.95); 
     z-index: 10000;
     margin: 0;
-    background: transparent !important; /* фон прозрачный */
-  pointer-events: none; /* клики по overlay не работают */
+    background: transparent !important; 
+  pointer-events: none; 
   }
-
   .formMessage {
     max-width: 90%;
     width: 100%;
-    max-height: 90vh;     /* если контент слишком большой, слегка скроллит внутри модалки */
+    max-height: 90vh;     
     overflow-y: auto;
-      pointer-events: auto; /* модалка по-прежнему реагирует на клики */
-
+      pointer-events: auto; 
   }
 }
-
-/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .overlay {
     padding: 16px;
     align-items: flex-start;
-    /* padding-top: 40px; */
     margin-top: -700px;
-    /* margin-bottom: -100px; */
   }
-
   .formMessage {
     width: 100%;
     max-width: 100%;
@@ -286,12 +242,10 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
-
   .formMessage h3 {
     font-size: 22px;
     margin-bottom: 20px;
   }
-
   .formMessage input,
   .formMessage textarea,
   .formMessage select {
@@ -299,18 +253,15 @@
     font-size: 16px;
     margin-top: 14px;
   }
-
   .formMessage textarea {
     height: 120px;
     resize: vertical;
   }
-
   .submit-btn {
     padding: 16px;
     font-size: 16px;
     margin-top: 20px;
   }
-
   .close-btn {
     font-size: 20px;
     width: 40px;
@@ -318,7 +269,6 @@
     top: 12px;
     right: 12px;
   }
-
   .nav-btn {
     position: fixed;
     bottom: 20px;
@@ -332,24 +282,20 @@
     width: 90%;
   }
 }
-
 @media (max-width: 480px) {
   .overlay {
     padding: 12px;
     padding-top: 20px;
   }
-
   .formMessage {
     padding: 24px 20px;
     border-radius: 16px;
     max-height: calc(100vh - 40px);
   }
-
   .formMessage h3 {
     font-size: 20px;
     margin-bottom: 18px;
   }
-
   .formMessage input,
   .formMessage textarea,
   .formMessage select {
@@ -357,18 +303,15 @@
     font-size: 15px;
     margin-top: 12px;
   }
-
   .submit-btn {
     padding: 14px;
     font-size: 15px;
   }
-
   .close-btn {
     width: 36px;
     height: 36px;
     font-size: 18px;
   }
-
   .nav-btn {
     bottom: -15px;
     right: 16px;
@@ -376,73 +319,62 @@
     font-size: 15px;
   }
 }
-/* ================= DARK THEME - Contact Form ================= */
-
-
 [data-theme="dark"] .formMessage,
 .dark .formMessage {
-  background: var(--brand-dark); /* твой тёмно-синий фон */
-  color: #ffffff; /* текст белый */
-  border: 1px solid var(--brand-primary); /* линии оранжевые */
-  box-shadow: 0 20px 50px rgba(2, 13, 38, 0.5); /* мягкая тень */
+  background: var(--brand-dark); 
+  color: #ffffff; 
+  border: 1px solid var(--brand-primary); 
+  box-shadow: 0 20px 50px rgba(2, 13, 38, 0.5); 
 }
-
 [data-theme="dark"] .formMessage h3,
 .dark .formMessage h3 {
-  color: #ffffff; /* заголовок белый */
+  color: #ffffff; 
 }
-
 [data-theme="dark"] .formMessage input,
 [data-theme="dark"] .formMessage textarea,
 [data-theme="dark"] .formMessage select,
 .dark .formMessage input,
 .dark .formMessage textarea,
 .dark .formMessage select {
-  background: var(--brand-dark); /* твой темный фон полей */
-  color: #ffffff; /* текст видимый */
-  border: 1.5px solid #333a60; /* светлая граница для читаемости */
+  background: var(--brand-dark); 
+  color: #ffffff; 
+  border: 1.5px solid #333a60; 
 }
-
 [data-theme="dark"] .formMessage input::placeholder,
 [data-theme="dark"] .formMessage textarea::placeholder,
 .dark .formMessage input::placeholder,
 .dark .formMessage textarea::placeholder {
-  color: #a0a8c0; /* мягкий серо-голубой, читаемый на тёмном фоне */
+  color: #a0a8c0; 
 }
-
 [data-theme="dark"] .formMessage input:focus,
 [data-theme="dark"] .formMessage textarea:focus,
 [data-theme="dark"] .formMessage select:focus,
 .dark .formMessage input:focus,
 .dark .formMessage textarea:focus,
 .dark .formMessage select:focus {
-  border-color: var(--brand-primary); /* оранжевый акцент при фокусе */
+  border-color: var(--brand-primary); 
   box-shadow: 0 0 0 3px rgba(255, 94, 20, 0.15);
 }
-
 [data-theme="dark"] .submit-btn,
 .dark .submit-btn {
-  background: var(--brand-dark); /* тёмно-синий фон кнопки */
+  background: var(--brand-dark); 
   color: #ffffff;
-  border: 1px solid var(--brand-primary); /* линии оранжевые */
+  border: 1px solid var(--brand-primary); 
 }
-
 [data-theme="dark"] .submit-btn:hover,
 .dark .submit-btn:hover {
-  background: linear-gradient(135deg, var(--brand-primary), #ff7a3d); /* оранжевый hover */
+  background: linear-gradient(135deg, var(--brand-primary), #ff7a3d); 
   box-shadow: 0 6px 20px rgba(255, 94, 20, 0.35);
   filter: brightness(1.05);
 }
-
 [data-theme="dark"] .close-btn,
 .dark .close-btn {
-  background: var(--brand-dark); /* тёмно-синий фон */
+  background: var(--brand-dark); 
   color: #ffffff;
   border: 1px solid #333a60;
 }
-
 [data-theme="dark"] .close-btn:hover,
 .dark .close-btn:hover {
-  background: var(--brand-primary); /* оранжевый hover */
+  background: var(--brand-primary); 
   color: #ffffff;
 }

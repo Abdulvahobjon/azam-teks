@@ -97,6 +97,16 @@
   "Tun rejimi": "Mode nuit",
   "Kun rejimi": "Mode jour",
   "Qidiruv...": "Recherche...",
+  "made": {
+    "title": "Processus de production",
+    "desc": "Fabriqué avec des technologies modernes",
+    "step1": "Préparation du coton",
+    "step2": "Filature des fils",
+    "step3": "Tissage du tissu",
+    "step4": "Blanchiment",
+    "step5": "Contrôle de qualité",
+    "btn": "Passer commande"
+  },
   "Bizning mijozlarimiz haqida fikrlari": "Avis de nos clients",
   "Ishlab chiqarish": "Production",
   "Bizning ishlab chiqarish korxonamiz zamonaviy texnologiyalar va yuqori sifatli uskunalar bilan jihozlangan. Biz 100% paxta mahsulotlarini to'liq texnologik tsikl bo'yicha ishlab chiqaramiz.": "Notre usine est équipée de technologies modernes et d'équipements de haute qualité. Nous produisons 100 % de produits en coton selon un cycle technologique complet.",

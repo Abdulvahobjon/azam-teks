@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './FactorySections.css';
-
 export default function FactorySections() {
   const { t } = useTranslation();
-
   useEffect(() => {
     const sections = document.querySelectorAll('.factory-section-item');
     const observer = new IntersectionObserver(
@@ -22,11 +20,9 @@ export default function FactorySections() {
     sections.forEach((section) => observer.observe(section));
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
-
   return (
     <div className="factory-sections-container">
-      {/* Production Section */}
-      <section className="factory-section-item">
+            <section className="factory-section-item">
         <div className="factory-section-content">
           <div className="factory-section-text">
             <h2>{t("Ishlab chiqarish") || "Ishlab chiqarish"}</h2>
@@ -41,9 +37,7 @@ export default function FactorySections() {
           </div>
         </div>
       </section>
-
-      {/* Quality Section */}
-      <section className="factory-section-item">
+            <section className="factory-section-item">
         <div className="factory-section-content reverse">
           <div className="factory-section-text">
             <h2>{t("Sifat nazorati") || "Sifat nazorati"}</h2>
@@ -58,9 +52,7 @@ export default function FactorySections() {
           </div>
         </div>
       </section>
-
-      {/* Process Section */}
-      <section className="factory-section-item">
+            <section className="factory-section-item">
         <div className="factory-section-content">
           <div className="factory-section-text">
             <h2>{t("Texnologik jarayon") || "Texnologik jarayon"}</h2>

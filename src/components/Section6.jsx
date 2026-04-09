@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import './Section6.css';
 import { useTranslation } from "react-i18next";
-
 export default function MapSection() {
   const { t } = useTranslation();
-
   useEffect(() => {
     const mapSection = document.querySelector('.map-section');
     const observer = new IntersectionObserver(
@@ -22,7 +20,6 @@ export default function MapSection() {
       if (mapSection) observer.unobserve(mapSection);
     };
   }, []);
-
   return (
     <section className="map-section">
       <iframe

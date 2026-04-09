@@ -2,10 +2,8 @@ import React, { useEffect } from 'react';
 import './Section7.css';
 import whyImg from '../assets/17yil.jpg';
 import { useTranslation } from "react-i18next";
-
 export default function WhyChooseUs() {
   const { t } = useTranslation();
-
   useEffect(() => {
     const text = document.querySelector('.why-text');
     const image = document.querySelector('.why-image');
@@ -26,7 +24,6 @@ export default function WhyChooseUs() {
       if (image) observer.unobserve(image);
     };
   }, []);
-
   return (
     <section className="why-section">
       <div className="why-container">

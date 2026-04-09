@@ -18,7 +18,6 @@
   overflow: hidden;
   will-change: transform, opacity;
 }
-
 .service-card.visible {
   opacity: 1;
   transform: translateY(0);
@@ -28,11 +27,9 @@
     transform: translateY(-8px);
     box-shadow: 0 16px 48px rgba(2, 13, 38, 0.2);
   }
-
   .service-card:hover img {
     transform: scale(1.08);
   }
-
   .service-card:hover h4 {
     color: var(--brand-primary);
   }
@@ -51,13 +48,11 @@
   margin: 0 auto;
   padding: 0 2rem;
 }
-
 @media (max-width: 768px) {
   .services-grid {
     padding: 0 1rem;
   }
 }
-
 .projects-section h2 {
   font-size: 36px;
   font-weight: 700;
@@ -65,7 +60,6 @@
   margin-bottom: 10px;
   letter-spacing: -0.02em;
 }
-
 .projects-section h3 {
   font-size: 22px;
   font-weight: 500;
@@ -75,15 +69,12 @@
 .class{
   color: var(--brand-primary) !important; 
 }
-/* Services grid bilan bir xil */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   justify-items: center;
 }
-
-/* CARD */
 .service-card {
   width: 100%;
   max-width: 380px;
@@ -96,13 +87,11 @@
   border: 1px solid var(--border-light);
   overflow: hidden;
 }
-
 .service-card.visible {
   opacity: 1;
   transform: translateY(0) scale(1);
   animation: fadeInUp 0.6s ease-out forwards;
 }
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -113,40 +102,32 @@
     transform: translateY(0) scale(1);
   }
 }
-
 .card-inner {
   padding: 25px;
   border-radius: 20px;
   overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
-/* Rasm kattaroq va hover zoom */
 .service-card img {
   width: 100%;
-  height: 300px; /* height kattaroq qilindi */
+  height: 300px; 
   object-fit: cover;
   border-radius: 16px;
   margin-bottom: 18px;
   transition: transform 0.4s ease;
 }
-
 .service-card:hover img {
-  transform: scale(1.1); /* rasm zoom */
+  transform: scale(1.1); 
 }
-
 .service-card:hover {
   border-color: rgba(255, 94, 20, 0.3);
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 16px 48px rgba(2, 13, 38, 0.2);
 }
-
 .service-card:hover .card-inner {
   transform: scale(1.03);
   box-shadow: 0 16px 40px rgba(2, 13, 38, 0.15);
 }
-
-/* Title kattaroq */
 .service-card h4 {
   font-size: 20px;
   font-weight: 600;
@@ -154,12 +135,9 @@
   margin: 0;
   transition: color var(--transition-base);
 }
-
 .service-card:hover h4 {
   color: var(--brand-primary);
 }
-
-/* RESPONSIVE */
 @media (max-width: 1024px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -168,7 +146,6 @@
     height: 260px;
   }
 }
-
 @media (max-width: 640px) {
   .services-grid {
     grid-template-columns: 1fr;
@@ -177,81 +154,59 @@
     height: 240px;
   }
 }
-
-/* ========================================
-   Projects / Services Section - Dark Theme
-   ======================================== */
 [data-theme="dark"] .projects-section,
 .dark .projects-section {
-  background: rgba(2, 13, 38, 0.3); /* тёмный фон */
+  background: rgba(2, 13, 38, 0.3); 
 }
-
 [data-theme="dark"] .projects-section h2,
 .dark .projects-section h2 {
   color: #ffffff;
 }
-
 [data-theme="dark"] .projects-section h3,
 .dark .projects-section h3 {
   color: rgba(255, 255, 255, 0.8);
 }
-
 [data-theme="dark"] .service-card {
-  background: rgba(255, 255, 255, 0.05); /* почти прозрачный белый */
-  border: 1px solid rgba(255, 94, 20, 0.2); /* тонкий оранжевый акцент */
+  background: rgba(255, 255, 255, 0.05); 
+  border: 1px solid rgba(255, 94, 20, 0.2); 
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
 }
-
 [data-theme="dark"] .service-card h4 {
   color: #ffffff;
 }
-
 [data-theme="dark"] .service-card:hover h4 {
   color: rgba(255, 94, 20, 0.9);
 }
-
 [data-theme="dark"] .service-card img {
   border-radius: 16px;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
   transition: all var(--transition-base);
 }
-
 [data-theme="dark"] .service-card:hover img {
   transform: scale(1.1);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);
 }
-
 [data-theme="dark"] .card-inner {
   background: transparent;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
 }
-
 [data-theme="dark"] .service-card:hover .card-inner {
   transform: scale(1.03);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
 }
-
-/* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
   [data-theme="dark"] .service-card img,
   .dark .service-card img {
     height: 260px;
   }
 }
-
 @media (max-width: 640px) {
   [data-theme="dark"] .service-card img,
   .dark .service-card img {
     height: 240px;
   }
 }
-
-/* ===============================
-   PROJECTS / SERVICES — MOBILE SAFE
-   =============================== */
 @media (max-width: 768px) {
-
-  /* Карточки сразу видны */
   .service-card {
     opacity: 1 !important;
     transform: none !important;
@@ -259,30 +214,22 @@
     transition: box-shadow 0.2s ease;
     will-change: auto;
   }
-
-  /* visible больше не анимирует */
   .service-card.visible {
     opacity: 1;
     transform: none;
   }
-
-  /* Убираем hover-эмуляцию */
   .service-card:hover {
     transform: none;
     box-shadow: 0 8px 24px rgba(2, 13, 38, 0.08);
   }
-
   .service-card:hover img,
   .service-card:hover .card-inner {
     transform: none;
     box-shadow: none;
   }
-
   .service-card:hover h4 {
     color: var(--brand-dark);
   }
-
-  /* Убираем image will-change */
   .service-card img {
     will-change: auto;
   }

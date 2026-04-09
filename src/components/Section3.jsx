@@ -2,10 +2,8 @@ import React, { useEffect } from 'react';
 import aboutImg from '../assets/service3.webp';
 import './Section3.css';
 import { useTranslation } from "react-i18next";
-
 export default function AboutSection() {
   const { t } = useTranslation();
-
   useEffect(() => {
     const image = document.querySelector('.about-image');
     const text = document.querySelector('.about-text');
@@ -26,7 +24,6 @@ export default function AboutSection() {
       if (text) observer.unobserve(text);
     };
   }, []);
-
   return (
     <section className="about-section">
       <div className="about-container">

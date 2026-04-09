@@ -83,6 +83,16 @@
   "100% paxta materiallari": "100% 면 재료",
   "Yuqori sifatli uskunalar": "고품질 장비",
   "Texnologik jarayon": "기술 프로세스",
+  "made": {
+    "title": "제작 과정",
+    "desc": "최신 기술을 사용하여 제작",
+    "step1": "면 준비",
+    "step2": "실 방적",
+    "step3": "직물 직조",
+    "step4": "표백",
+    "step5": "품질 관리",
+    "btn": "주문하기"
+  },
   "Bizning ishlab chiqarish jarayonimiz zamonaviy va samarali. Har bir bosqich ehtiyotkorlik bilan nazorat qilinadi va eng yaxshi natijalarni ta'minlaydi.": "우리의 생산 프로세스는 현대적이고 효율적입니다. 각 단계는 신중하게 제어되어 최상의 결과를 보장합니다.",
     "Qidiruv...": "검색...",
   "Ishlab chiqarish": "생산",

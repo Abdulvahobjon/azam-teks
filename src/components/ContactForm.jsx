@@ -3,11 +3,9 @@ import { useTranslation } from "react-i18next"
 import { toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import "./ContactForm.css"
-
 export default function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
-
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -15,8 +13,6 @@ export default function ContactForm() {
     topic: "",
     message: "",
   });
-
-  // Prevent body scroll when modal is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -27,8 +23,6 @@ export default function ContactForm() {
       document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
-
-  // Close on Escape key
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === 'Escape' && isOpen) {
@@ -38,37 +32,26 @@ export default function ContactForm() {
     window.addEventListener('keydown', handleEscape);
     return () => window.removeEventListener('keydown', handleEscape);
   }, [isOpen]);
-
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
-
-  // Telegram bot token va chat ID
   const BOT_TOKEN = "8260660890:AAE2lYCbJ7w8hsf3-Z4S7_BuiaSsP0MJ5fA";
   const CHAT_ID = "-1003584258291";
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Telegramga yuboriladigan xabar
     const message = `
 📩 Yangi so'rov:
-
 👤 Ism: ${form.name}
 📞 Telefon: ${form.phone}
 📧 Email: ${form.email}
 🏷 Mavzu: ${form.topic}
-
 📝 Xabar:
 ${form.message}`;
-
     try {
       const res = await fetch(
         `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}`
       );
-
       const data = await res.json();
-
       if (data.ok) {
         toast.success(t("Xabar yuborildi!"));
         setForm({
@@ -85,16 +68,13 @@ ${form.message}`;
       console.error(err);
        toast.error(t("Xatolik yuz berdi!"));
     }
-
     setIsOpen(false);
   };
-
   return (
     <>
       <button className="nav-btn" onClick={() => setIsOpen(true)}>
         {t("BIZ BILAN BOG'LANISH")}
       </button>
-
       {isOpen && (
         <div 
           className={`overlay ${isOpen ? 'show' : ''}`} 
@@ -113,9 +93,7 @@ ${form.message}`;
             >
               ✖
             </button>
-
             <h3>{t("BOG'LANISH")}</h3>
-
             <input
               name="name"
               placeholder={t("Ismingiz")}
@@ -124,7 +102,6 @@ ${form.message}`;
               required
               autoComplete="name"
             />
-
             <input
               name="phone"
               type="tel"
@@ -134,7 +111,6 @@ ${form.message}`;
               required
               autoComplete="tel"
             />
-
             <input
               type="email"
               name="email"
@@ -144,7 +120,6 @@ ${form.message}`;
               required
               autoComplete="email"
             />
-
             <select
               name="topic"
               value={form.topic}
@@ -157,7 +132,6 @@ ${form.message}`;
               <option value="Savol">{t("Savol")}</option>
               <option value="Boshqa">{t("Boshqa")}</option>
             </select>
-
             <textarea
               name="message"
               placeholder={t("Xabaringiz")}
@@ -165,15 +139,12 @@ ${form.message}`;
               onChange={handleChange}
               rows="4"
             />
-
             <button type="submit" className="submit-btn">
               {t("Yuborish")}
             </button>
           </form>
-          
-        </div>
-        
-      )}
+                  </div>
+              )}
     </>
   );
 }

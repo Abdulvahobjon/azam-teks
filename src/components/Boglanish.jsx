@@ -7,13 +7,10 @@ import img1 from '../assets/contact_us.png'
 import Footer from './Footer'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 const TELEGRAM_BOT_TOKEN = "8260660890:AAE2lYCbJ7w8hsf3-Z4S7_BuiaSsP0MJ5fA";
 const CHAT_ID = "-1003584258291";
-
 export default function ContactPage() {
   const { t } = useTranslation();
-
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -21,25 +18,19 @@ export default function ContactPage() {
     topic: "",
     message: "",
   });
-
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const text = `
 📩 Yangi so'rov:
-
 👤 Ism: ${form.name}
 📞 Telefon: ${form.phone}
 📧 Email: ${form.email}
 🏷 Mavzu: ${form.topic}
-
 📝 Xabar:
 ${form.message}`;
-
     try {
       const res = await axios.post(
         `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
@@ -51,7 +42,6 @@ ${form.message}`;
           headers: { "Content-Type": "application/json" },
         }
       );
-
       if (res.status === 200) {
          toast.success(t("Xabar yuborildi!"));
         setForm({
@@ -69,19 +59,15 @@ ${form.message}`;
        toast.error(t("Xatolik yuz berdi!"));
     }
   };
-
   return (
 		<>
     <div className="contact-page">
-      {/* Agar rasm kerak bo‘lsa yuqoriga qo‘shing */}
-      <div className="contact-banner">
+            <div className="contact-banner">
         <img src={img1} alt="Banner" />
       </div>
-
       <div className="contact-form-container">
         <form className="formMessage" onSubmit={handleSubmit}>
           <h3>{t("BOG'LANISH")}</h3>
-
           <input
             name="name"
             placeholder={t("Ismingiz")}
@@ -89,7 +75,6 @@ ${form.message}`;
             onChange={handleChange}
             required
           />
-
           <input
             name="phone"
             placeholder={t("Telefon raqam")}
@@ -97,7 +82,6 @@ ${form.message}`;
             onChange={handleChange}
             required
           />
-
           <input
             type="email"
             name="email"
@@ -106,7 +90,6 @@ ${form.message}`;
             onChange={handleChange}
             required
           />
-
           <select
             name="topic"
             value={form.topic}
@@ -119,21 +102,18 @@ ${form.message}`;
             <option value="Savol">{t("Savol")}</option>
             <option value="Boshqa">{t("Boshqa")}</option>
           </select>
-
           <textarea
             name="message"
             placeholder={t("Xabaringiz")}
             value={form.message}
             onChange={handleChange}
           />
-
           <button type="submit" className="submit-btn">
             {t("Yuborish")}
           </button>
         </form>
       </div>
     </div>
-
 </>
   );
 }
