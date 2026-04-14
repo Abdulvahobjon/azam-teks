@@ -80,7 +80,7 @@ export default function Navbar() {
           <Link to={"https://t.me/azamteks"}><BsTelegram /></Link>
           <Link to={"https://www.instagram.com/azam_teks"}><FaSquareInstagram /></Link>
           <Link to={"https://www.threads.com/@azam_teks"}><FaSquareThreads /></Link>
-          <Link to={"https://www.facebook.com/people/Azam-Teks"}><FaFacebookSquare /></Link>
+          <Link to={"https://www.facebook.com/share/1CZxtu4W6e/?mibextid=wwXIfr"}><FaFacebookSquare /></Link>
         </div>
       </div>
     </div>

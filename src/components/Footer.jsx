@@ -19,7 +19,7 @@ export default function Footer() {
             <Link to={"https://t.me/azamteks"} target="_blank" rel="noopener noreferrer"><BsTelegram/></Link>
             <Link to={"https://www.instagram.com/azam_teks"} target="_blank" rel="noopener noreferrer"><FaSquareInstagram/></Link>
             <Link to={"https://www.threads.com/@azam_teks"} target="_blank" rel="noopener noreferrer"><FaSquareThreads/></Link>
-            <Link to={"https://www.facebook.com/people/Azam-Teks"} target="_blank" rel="noopener noreferrer"><FaFacebookSquare/></Link>
+            <Link to={"https://www.facebook.com/share/1CZxtu4W6e/?mibextid=wwXIfr"} target="_blank" rel="noopener noreferrer"><FaFacebookSquare/></Link>
           </div>
         </div>
         <div className="footer-section links">
