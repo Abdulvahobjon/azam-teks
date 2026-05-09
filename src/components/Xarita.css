@@ -1,0 +1,225 @@
+.xarita-section {
+  width: 100%;
+  padding: 90px 20px;
+  background: var(--bg-white);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.xarita-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  padding: 0 2rem;
+}
+
+.xarita-image,
+.xarita-content {
+  flex: 1;
+}
+.xarita-content h3{
+	text-align: center;
+}
+.xarita-image img {
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 15px 50px rgba(2, 13, 38, 0.12);
+  transition: all 0.5s ease;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+.xarita-image img:hover {
+  transform: scale(1.02);
+}
+
+.xarita-content {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.xarita-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.xarita-small-title {
+  color: var(--brand-primary);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+
+.xarita-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: var(--brand-dark);
+  font-weight: 700;
+}
+
+.xarita-text {
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--text-secondary);
+  margin-bottom: 35px;
+}
+
+.xarita-cards {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.xarita-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  min-width: 160px;
+  flex: 1;
+  box-shadow: 0 8px 24px rgba(2, 13, 38, 0.08);
+  transition: all 0.35s ease;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.xarita-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(2, 13, 38, 0.12);
+}
+
+.xarita-card span {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--brand-primary);
+  margin-bottom: 10px;
+}
+
+.xarita-card p {
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+/* ================== ANIMATION ================== */
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ================== TABLET ================== */
+
+@media (max-width: 1024px) {
+
+  .xarita-container {
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .xarita-title {
+    text-align: center;
+  }
+
+  .xarita-small-title {
+    text-align: center;
+  }
+
+  .xarita-text {
+    text-align: center;
+  }
+
+  .xarita-cards {
+    justify-content: center;
+  }
+}
+
+/* ================== MOBILE ================== */
+
+@media (max-width: 768px) {
+
+  .xarita-section {
+    padding: 65px 18px;
+  }
+
+  .xarita-container {
+    padding: 0;
+    gap: 35px;
+  }
+
+  .xarita-image img {
+    border-radius: 18px;
+    animation: none; /* telefonda qotmasligi uchun */
+  }
+
+  .xarita-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .xarita-text {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .xarita-cards {
+    flex-direction: column;
+  }
+
+  .xarita-card {
+    min-width: 100%;
+    padding: 20px;
+  }
+
+  .xarita-card:hover {
+    transform: none;
+  }
+}
+
+/* ================== DARK THEME ================== */
+
+[data-theme="dark"] .xarita-section,
+.dark .xarita-section {
+  background: rgba(2, 13, 38, 0.35);
+}
+
+[data-theme="dark"] .xarita-title,
+.dark .xarita-title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .xarita-text,
+.dark .xarita-text {
+  color: rgba(255,255,255,0.85);
+}
+
+[data-theme="dark"] .xarita-card,
+.dark .xarita-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+}
+
+[data-theme="dark"] .xarita-card p,
+.dark .xarita-card p {
+  color: rgba(255,255,255,0.8);
+}
+
+[data-theme="dark"] .xarita-image img,
+.dark .xarita-image img {
+  box-shadow: 0 15px 45px rgba(0,0,0,0.5);
+}

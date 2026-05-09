@@ -95,7 +95,7 @@ export default function Navbar() {
           <li><Link to={"/"} onClick={() => setMenuOpen(false)}>{t("Bosh sahifa")}</Link></li>
           <li><Link to={"/bizhaqimizda"} onClick={() => setMenuOpen(false)}>{t("Biz haqimizda")}</Link></li>
           <li><Link to={"/xizmatlar"} onClick={() => setMenuOpen(false)}>{t("Xizmatlar")}</Link></li>
-          <li><Link to={"/loyihalar"} onClick={() => setMenuOpen(false)}>{t("Loyihalar")}</Link></li>
+          {/* <li><Link to={"/loyihalar"} onClick={() => setMenuOpen(false)}>{t("Loyihalar")}</Link></li> */}
           <li><Link to={"/boglanish"} onClick={() => setMenuOpen(false)}>{t("Bog'lanish")}</Link></li>
           <li><Link to={"/mijozlarfikri"} onClick={() => setMenuOpen(false)}>{t("Mijozlar fikri")}</Link></li>
           <div className="search-wrapper">

@@ -14,6 +14,7 @@ import MijozlarFikri from './components/Mijozlarfikri.jsx'
 import Footer from './components/Footer.jsx'
 import { toast, ToastContainer } from 'react-toastify'
 import Made from './components/made.jsx'
+import Xarita from './components/Xarita.jsx'
 function App() {
   const location = useLocation();
   useEffect(() => {
@@ -32,8 +33,9 @@ function App() {
         <Route path='/bizhaqimizda' element={<Bizhaqimizda/>}/>
         <Route path='/made' element={<Made/>}/>
         <Route path='/xizmatlar' element={<Xizmatlar/>}/>
-        <Route path='/loyihalar' element={<Loyihalar/>}/>
+        {/* <Route path='/loyihalar' element={<Loyihalar/>}/> */}
         <Route path='/boglanish' element={<Boglanish/>}/>
+        <Route path='/xarita' element={<Xarita/>}/>
         <Route path='/mijozlarfikri' element={<MijozlarFikri/>}/>
         <Route path='/card/:id' element={<SingleCard/>}/>
         <Route path='/card2/:id' element={<SingleCard2/>}/>

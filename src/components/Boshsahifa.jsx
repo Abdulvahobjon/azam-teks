@@ -7,6 +7,7 @@ import Section6 from './Section6.jsx'
 import Section7 from './Section7.jsx'
 import FactorySections from './FactorySections.jsx'
 import Made from './made.jsx'
+import Xarita from './Xarita.jsx'
 export default function Boshsahifa(){
 	return(
 		<>
@@ -15,9 +16,10 @@ export default function Boshsahifa(){
 						<Section3/>
 						<Made/>
 						<Section4/>
-						<Section5/>
+						{/* <Section5/> */}
 						<Section6/>
 						<FactorySections/>
+						<Xarita/>
 						<Section7/>
 		</>
 	)

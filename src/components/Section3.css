@@ -17,7 +17,7 @@
 .about-image,
 .about-text {
   flex: 1;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: center;
   opacity: 0;
@@ -35,6 +35,15 @@
 }
 .about-text {
   animation-delay: 0s;
+}
+.about-text h3,h2{
+  text-align: center;
+}
+.bigbox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%; /* MUHIM */
 }
 .about-image img {
   width: 100%;
@@ -72,6 +81,24 @@
   color: var(--text-secondary);
   margin-bottom: 16px;
 }
+.textbox1,
+.textbox2,
+.textbox3 {
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 18px rgba(2, 13, 38, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* hover effect (desktopda) */
+.textbox1:hover,
+.textbox2:hover,
+.textbox3:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(2, 13, 38, 0.12);
+}
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -82,6 +109,23 @@
     transform: translateY(0);
   }
 }
+/* @media (max-width: 768px) {
+  .textbox1,
+  .textbox2,
+  .textbox3 {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    margin-bottom: 16px;
+  }
+
+  .textbox1:hover,
+  .textbox2:hover,
+  .textbox3:hover {
+    transform: none;
+    box-shadow: none;
+  }
+} */
 @media (max-width: 1024px) {
   .about-container {
     flex-direction: column;

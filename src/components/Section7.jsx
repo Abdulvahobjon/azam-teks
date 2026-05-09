@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './Section7.css';
-import whyImg from '../assets/17yil.jpg';
+import whyImg from '../assets/IMG_5281.PNG';
 import { useTranslation } from "react-i18next";
 export default function WhyChooseUs() {
   const { t } = useTranslation();

@@ -10,6 +10,18 @@ import new15 from '../assets/product/new/Постельное Белье/AT_006.
 import new16 from '../assets/product/new/Постельное Белье/AT_007_.jpg'
 import new17 from '../assets/product/new/Постельное Белье/AT_008.jpg'
 import new18 from '../assets/product/new/Постельное Белье/AT_010_.jpg'
+import vafel111 from '../assets/IMG_1931.JPG'
+import marli1 from '../assets/IMG_1930.JPG'
+import yevro1 from '../assets/IMG_1925.PNG'
+import yevro2 from '../assets/yevro/IMG_7984.JPG'
+import yevro3 from '../assets/yevro/IMG_7985.JPG'
+import yevro4 from '../assets/yevro/IMG_7986.JPG'
+import yevro5 from '../assets/yevro/IMG_7987.JPG'
+import yevro6 from '../assets/yevro/IMG_7988.JPG'
+import yevro7 from '../assets/yevro/IMG_7989.JPG'
+import yevro8 from '../assets/yevro/IMG_7991.JPG'
+import yevro9 from '../assets/yevro/IMG_7991.JPG'
+import yevro10 from '../assets/yevro/IMG_7992.JPG'
 import service1 from '../assets/001.3.png'
 import service4 from '../assets/003.2.png'
 import service6 from '../assets/010.1.png'
@@ -23,6 +35,7 @@ import service12 from '../assets/2bff21cf93dba1dd8be84e252d4fbb92.jpg'
 import service2 from '../assets/handkerchiefs_image_1.jpg'
 import service5 from '../assets/mattress_image_1.jpg'
 import { useNavigate } from 'react-router-dom'
+import dasramol111111 from '../assets/IMG_5280.PNG'
 import dasramol10 from '../assets/product/handkerchiefs/handkerchiefs_image_10.jpg'
 import dasramol11 from '../assets/product/handkerchiefs/handkerchiefs_image_11.jpg'
 import dasramol12 from '../assets/product/handkerchiefs/handkerchiefs_image_12.jpg'
@@ -49,6 +62,8 @@ import matras6 from '../assets/product/mattress/mattress_image_6.jpg'
 import matras7 from '../assets/product/mattress/mattress_image_7.jpg'
 import matras8 from '../assets/product/mattress/mattress_image_8.jpg'
 import matras9 from '../assets/product/mattress/mattress_image_9.jpg'
+import notoqilgan from '../assets/IMG_1933.JPG'
+import suruf from '../assets/IMG_1934.JPG'
 import new2 from '../assets/product/new/Постельное Белье/010.1.png'
 import new3 from '../assets/product/new/Постельное Белье/015.2.png'
 import new4 from '../assets/product/new/Постельное Белье/016.1.png'
@@ -85,18 +100,18 @@ import pol3 from '../assets/product/new/Нетканое полотно/orig.web
 import pol4 from '../assets/product/new/Нетканое полотно/polotno-netkanoe-beloe_1.800x600.jpg'
 import Aos from 'aos'
 export const services = [
-  { title: 'Постельное Белье',id:1, img: [new10 , new11, new12, new13, new14, new15, new16, new17, new18] },
-  { title: 'Носовное платок',id:2, img: [service2, dasramol2,dasramol3,dasramol4,dasramol5,dasramol6,dasramol7,dasramol8,dasramol9,dasramol10,dasramol11,dasramol12,dasramol13,dasramol14,dasramol15,dasramol16,dasramol17]},
-  { title: 'Постельное Белье',id:3, img: [service3, service1, service4, service6, new2,new3,new4,new5,new6,new7] },
+  { title: 'Постельное Белье',id:1, img: [new10 , new11, new12, new13, new14, new15, new16, new17, new18,service3, service1, service4, service6, new2,new3,new4,new5,new6,new7] },
+  { title: 'Носовное платок',id:2, img: [dasramol111111, service2, dasramol2,dasramol3,dasramol4,dasramol5,dasramol6,dasramol7,dasramol8,dasramol9,dasramol10,dasramol11,dasramol12,dasramol13,dasramol14,dasramol15,dasramol16,dasramol17]},
+  // { title: 'Постельное Белье',id:3, img: [service3, service1, service4, service6, new2,new3,new4,new5,new6,new7] },
   // { title: 'Постельное Белье',id:4, img: [service1, service3, service4, service6, new2,new3,new4,new5,new6,new7] },
-  { title: 'Европостель',id:5, img: [service5,matras2,matras3,matras4,matras5,matras6,matras7,matras8,matras9,matras10,matras11] },
+  { title: 'Европостель',id:5, img: [yevro1, yevro2, yevro3, yevro4, yevro5, yevro6, yevro7, yevro8, yevro9, yevro10 ] },
   // { title: 'Постельное Белье',id:6, img: [new13,service6, service3, service4, service1, new2,new3,new4,new5,new6,new7] },
-  { title: 'Бязь Отбеленное',id:7, img: [service7, byaz1, byaz2, byaz3, byaz4, byaz5] },
+  { title: 'Бязь Отбеленное',id:7, img: [suruf, service7, byaz1, byaz2, byaz3, byaz4, byaz5] },
   { title: 'Бязь',id:8, img: [service8, baz1, baz2, baz3, baz4, baz5, baz6] },
-  { title: 'Вафельное полотно',id:9, img: [service9, vafel1, vafel2, vafel3] },
-  { title: 'Диагональ',id:10, img: [service10, diag1, diag2, diag3, diag4, diag5] },
-  { title: 'Марли',id:11, img: [service11, mar1, mar2, mar3, mar4] },
-  { title: 'Нетканое полотно',id:12, img: [service12, pol1, pol2, pol3, pol4] },
+  { title: 'Вафельное полотно',id:9, img: [vafel111, service9, vafel1, vafel2, vafel3] },
+  // { title: 'Диагональ',id:10, img: [service10, diag1, diag2, diag3, diag4, diag5] },
+  { title: 'Марли',id:11, img: [marli1, service11, mar1, mar2, mar3, mar4] },
+  { title: 'Нетканое полотно',id:12, img: [notoqilgan, service12, pol1, pol2, pol3, pol4] },
 ];
 function ServicesSection() {
   const { t } = useTranslation();
