@@ -15,6 +15,8 @@ import Footer from './components/Footer.jsx'
 import { toast, ToastContainer } from 'react-toastify'
 import Made from './components/made.jsx'
 import Xarita from './components/Xarita.jsx'
+import Topmahsulot from './components/Topmahsulot.jsx'
+Topmahsulot
 function App() {
   const location = useLocation();
   useEffect(() => {
@@ -37,6 +39,7 @@ function App() {
         <Route path='/boglanish' element={<Boglanish/>}/>
         <Route path='/xarita' element={<Xarita/>}/>
         <Route path='/mijozlarfikri' element={<MijozlarFikri/>}/>
+        <Route path='/topmahsulot' element={<Topmahsulot/>}/>
         <Route path='/card/:id' element={<SingleCard/>}/>
         <Route path='/card2/:id' element={<SingleCard2/>}/>
       </Routes>

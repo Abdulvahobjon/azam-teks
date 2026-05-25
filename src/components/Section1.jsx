@@ -16,7 +16,7 @@ export default function Section1() {
   const slides = [
     {
       img: img1,
-      title: t("Biz eng yaxshi sanoat xizmatlarini taqdim etamiz"),
+      title: "Yuqori sifat - eng zamonaviy ko'rinishda aks etadi!",
       desc: t("Bizning kompaniyamiz sifatli va ishonchli sanoat yechimlarini taklif qiladi."),
     },
     {

@@ -119,5 +119,18 @@
     "Eksport davlatlari": "Eksport davlatlari",
     "Sifat nazorati": "Sifat nazorati",
     "Tashkil etilgan": "Tashkil etilgan"
-  }
+  },
+
+  "top_product_alt": "TOP mahsulot rasmi",
+  "top_product_title": "HAFTANING TOP MAHSULOTI",
+  "top_product_desc_1": "• Mahsulot turi: Vafel sochiq",
+  "top_product_desc_2": "• Tarkibi: 100% paxta",
+  "top_product_desc_3": "• Uzunligi: 60±2 sm",
+  "top_product_desc_4": "• Kengligi: 36±2 sm",
+  "buy_now": "Hoziroq sotib olish",
+  "time_left": "Qolgan vaqt",
+  "days": "k",
+  "hours": "s",
+  "minutes": "d",
+  "seconds": "s"
 }

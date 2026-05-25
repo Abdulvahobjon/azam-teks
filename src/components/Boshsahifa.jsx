@@ -8,9 +8,11 @@ import Section7 from './Section7.jsx'
 import FactorySections from './FactorySections.jsx'
 import Made from './made.jsx'
 import Xarita from './Xarita.jsx'
+import Topmahsulot from './Topmahsulot.jsx'
 export default function Boshsahifa(){
 	return(
 		<>
+						<Topmahsulot/>
 						<Section1/>
 						<Section2/>
 						<Section3/>

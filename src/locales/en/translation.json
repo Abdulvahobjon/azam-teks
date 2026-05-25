@@ -162,5 +162,19 @@
       "name": "Nilufar T.",
       "text": "Each order is carefully prepared. Fabrics are soft, high-quality, and comfortable."
     }
-  }
+  },
+
+  "top_product_alt": "Top product image",
+  "top_product_title": "TOP PRODUCT OF THE WEEK",
+  "top_product_desc_1": "• Product type: waffle towel",
+  "top_product_desc_2": "• Material: 100% cotton",
+  "top_product_desc_3": "• Length: 60±2 cm",
+  "top_product_desc_4": "• Width: 36±2 cm",
+  "buy_now": "Buy now",
+  "time_left": "Time left",
+  "days": "d",
+  "hours": "h",
+  "minutes": "m",
+  "seconds": "s"
+
 }

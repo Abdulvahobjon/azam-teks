@@ -1,0 +1,305 @@
+/* BUTTONS ROW */
+.top-product__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+/* COUNTDOWN BUTTON */
+.countdownTOP {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+/* TITLE */
+.countdown-title {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* TIME */
+.countdown-time {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 3px;
+}
+
+/* GLOW ANIMATION */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(255,255,255,0.1);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(255,94,20,0.35);
+    transform: scale(1.03);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(255,255,255,0.1);
+    transform: scale(1);
+  }
+}
+
+.top-product {
+  width: 100%;
+  padding: 40px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.top-product__image {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGE */
+.top-product__image img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.top-product__image:hover img {
+  transform: scale(1.05);
+}
+
+/* TEXT OVER IMAGE */
+.top-product__text {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+
+  max-width: 460px;
+  padding: 10px 0;
+
+  color: #fff;
+
+  animation: fadeUp 0.6s ease;
+}
+
+/* TITLE GLOW */
+.top-product__text h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+	text-align: left;
+
+  text-shadow:
+    /* 0 0 6px rgba(255, 255, 255, 0.9), */
+    0 0 14px rgba(255, 94, 20, 0.6);
+}
+
+/* PARAGRAPH GLOW LIGHT */
+.top-product__text p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+	font-weight: 650;
+
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.9);
+}
+
+/* BUTTON */
+.orderTOP {
+  margin-top: 14px;
+  padding: 10px 16px;
+	font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #ff5e14;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.orderTOP a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.orderTOP:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 94, 20, 0.35);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE (JUDAY MUHIM) */
+@media (max-width: 1024px) {
+  .top-product__image img {
+    height: 420px;
+  }
+
+  .top-product__text {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-product {
+    padding: 20px 3%;
+  }
+
+  .top-product__image img {
+    height: 340px;
+  }
+
+  .top-product__text {
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    max-width: 100%;
+  }
+
+  .top-product__text h2 {
+    font-size: 18px;
+  }
+
+  .top-product__text p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-product__image img {
+    height: 260px;
+  }
+
+  .orderTOP {
+    width: 100%;
+  }
+}
+
+/* =========================
+   TABLET FIX
+========================= */
+@media (max-width: 1024px) {
+  .top-product__image img {
+    height: 420px;
+  }
+
+  .top-product__text {
+    max-width: 420px;
+  }
+}
+
+/* =========================
+   MOBILE (MAIN FIX)
+========================= */
+@media (max-width: 768px) {
+  .top-product {
+    padding: 16px 3%;
+  }
+
+  .top-product__image img {
+    height: 320px;
+  }
+
+  /* TEXT BOX FIX */
+  .top-product__text {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+
+    max-width: 55%;
+
+    /* MUHIM: mobile’da readability */
+    /* background: rgba(0, 0, 0, 0.35); */
+    padding: 12px;
+    border-radius: 12px;
+
+    /* backdrop-filter: blur(4px); */
+  }
+
+  .top-product__text h2 {
+    font-size: 13px;
+    /* line-height: 1.3; */
+  }
+
+  .top-product__text p {
+    font-size: 10px;
+    /* line-height: 1.5; */
+  }
+
+  /* BUTTONS STACK */
+  .top-product__actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .orderTOP,
+  .countdownTOP {
+    width: 100%;
+  }
+
+  .countdown-time {
+    font-size: 10px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE FIX
+========================= */
+@media (max-width: 480px) {
+  .top-product__image img {
+    height: 250px;
+  }
+
+  .top-product__text {
+    padding: 3px;
+    bottom: 2px;
+  }
+
+  .top-product__text h2 {
+    font-size: 14px;
+  }
+
+  .top-product__text p {
+    font-size: 12px;
+  }
+
+  .orderTOP {
+    font-size: 13px;
+  }
+
+  .countdown-time {
+    font-size: 12px;
+  }
+
+	.countdown-title{
+		display: none;
+	}
+}
