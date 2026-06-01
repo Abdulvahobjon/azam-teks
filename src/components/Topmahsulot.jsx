@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import TOP from "../assets/TOP/IMG_5807.PNG";
+import TOP from "../assets/TOP/IMG_2736.JPG";
 import "./Topmahsulot.css";
 
 const WEEK = 7 * 24 * 60 * 60 * 1000;
@@ -82,6 +82,8 @@ export default function Topmahsulot() {
             {t("top_product_desc_3")}
             <br />
             {t("top_product_desc_4")}
+            <br />
+            {t("top_product_desc_5")}
           </p>
 
           {/* <div className="Price">

@@ -47,7 +47,7 @@
   box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
 } */
 
-.Price mark {
+/* .Price mark {
   background: linear-gradient(135deg, #ff5e14, #ff8c42);
   color: #fff;
   padding: 8px 18px;
@@ -61,7 +61,7 @@
     0 8px 20px rgba(255, 94, 20, 0.25);
 
   animation: priceGlow 2s infinite ease-in-out;
-}
+} */
 
 @keyframes priceGlow {
   0% {
@@ -177,7 +177,7 @@
 .top-product__text p {
   font-size: 14px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.92);
+  color: #ff5e14;
 	font-weight: 650;
 
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.9);
