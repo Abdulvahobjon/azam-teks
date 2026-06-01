@@ -15,32 +15,52 @@ const getStartTime = () => {
     localStorage.setItem(STORAGE_KEY, start);
   }
 
-  return parseInt(start);
+  return Number(start);
+};
+
+const getTimeLeft = (start) => {
+  const now = Date.now();
+  let elapsed = now - start;
+
+  if (elapsed >= WEEK) {
+    const cyclesPassed = Math.floor(elapsed / WEEK);
+    const newStart = start + cyclesPassed * WEEK;
+
+    localStorage.setItem(STORAGE_KEY, newStart);
+
+    elapsed = now - newStart;
+  }
+
+  const remaining = WEEK - elapsed;
+
+  return {
+    days: Math.floor(remaining / (24 * 60 * 60 * 1000)),
+    hours: Math.floor((remaining / (60 * 60 * 1000)) % 24),
+    minutes: Math.floor((remaining / (60 * 1000)) % 60),
+    seconds: Math.floor((remaining / 1000) % 60),
+  };
 };
 
 export default function Topmahsulot() {
   const { t } = useTranslation();
 
-  const [startTime] = useState(getStartTime());
+  const [startTime, setStartTime] = useState(getStartTime());
   const [timeLeft, setTimeLeft] = useState(getTimeLeft(startTime));
-
-  function getTimeLeft(start) {
-    const now = Date.now();
-    const elapsed = now - start;
-    const cycle = elapsed % WEEK;
-    const remaining = WEEK - cycle;
-
-    return {
-      days: Math.floor(remaining / (24 * 60 * 60 * 1000)),
-      hours: Math.floor((remaining / (60 * 60 * 1000)) % 24),
-      minutes: Math.floor((remaining / (60 * 1000)) % 60),
-      seconds: Math.floor((remaining / 1000) % 60),
-    };
-  }
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(getTimeLeft(startTime));
+      const now = Date.now();
+      const elapsed = now - startTime;
+
+      if (elapsed >= WEEK) {
+        const newStart = Date.now();
+
+        localStorage.setItem(STORAGE_KEY, newStart);
+        setStartTime(newStart);
+        setTimeLeft(getTimeLeft(newStart));
+      } else {
+        setTimeLeft(getTimeLeft(startTime));
+      }
     }, 1000);
 
     return () => clearInterval(timer);
@@ -55,11 +75,15 @@ export default function Topmahsulot() {
           <h2>{t("top_product_title")}</h2>
 
           <p>
-            {t("top_product_desc_1")}<br />
-            {t("top_product_desc_2")}<br />
-            {t("top_product_desc_3")}<br />
+            {t("top_product_desc_1")}
+            <br />
+            {t("top_product_desc_2")}
+            <br />
+            {t("top_product_desc_3")}
+            <br />
             {t("top_product_desc_4")}
           </p>
+
           {/* <div className="Price">
             <del>0,70$</del>
             <mark>0,65$</mark>
@@ -68,9 +92,7 @@ export default function Topmahsulot() {
 
           <div className="top-product__actions">
             <button className="orderTOP">
-              <Link to="/boglanish">
-                {t("buy_now")}
-              </Link>
+              <Link to="/boglanish">{t("buy_now")}</Link>
             </button>
 
             <button className="countdownTOP">
@@ -80,9 +102,9 @@ export default function Topmahsulot() {
 
               <div className="countdown-time">
                 {timeLeft.days} {t("days")} :{" "}
-                {timeLeft.hours} {t("hours")} :{" "}
-                {timeLeft.minutes} {t("minutes")} :{" "}
-                {timeLeft.seconds} {t("seconds")}
+                {String(timeLeft.hours).padStart(2, "0")} {t("hours")} :{" "}
+                {String(timeLeft.minutes).padStart(2, "0")} {t("minutes")} :{" "}
+                {String(timeLeft.seconds).padStart(2, "0")} {t("seconds")}
               </div>
             </button>
           </div>
