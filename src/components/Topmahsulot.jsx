@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import TOP from "../assets/TOP/IMG_2736.JPG";
+import TOP from "../assets/TOP/IMG_6109.JPG";
 import "./Topmahsulot.css";
 
 const WEEK = 7 * 24 * 60 * 60 * 1000;

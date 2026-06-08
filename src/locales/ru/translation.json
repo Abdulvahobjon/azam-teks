@@ -165,17 +165,17 @@
     }
   },
 
-  "top_product_alt": "Фото топ продукта",
-  "top_product_title": "ТОП ТОВАР НЕДЕЛИ",
-  "top_product_desc_1": "• Тип товара: BZ Postel",
-  "top_product_desc_2": "• Состав: 100% хлопок",
-  "top_product_desc_3": "• Толщина: 16",
-  "top_product_desc_4": "• Длина: 50 м",
-  "top_product_desc_5": "• Ширина: 1,50 м",
-  "buy_now": "Купить сейчас",
-  "time_left": "Оставшееся время",
-  "days": "д",
-  "hours": "ч",
-  "minutes": "м",
-  "seconds": "с"
+"top_product_alt": "Изображение ТОП товара",
+"top_product_title": "ТОП ТОВАР НЕДЕЛИ",
+"top_product_desc_1": "• Тип товара: Готовые пододеяльники",
+"top_product_desc_2": "• Состав: 100% хлопок",
+"top_product_desc_3": "• Плотность: 16/20",
+"top_product_desc_4": "• Размеры: для односпальных и двуспальных кроватей.",
+"top_product_desc_5": "• В комплекте: 2 наволочки, простыня, пододеяльник.",
+"buy_now": "Купить сейчас",
+"time_left": "Осталось времени",
+"days": "д",
+"hours": "ч",
+"minutes": "м",
+"seconds": "с"
 }

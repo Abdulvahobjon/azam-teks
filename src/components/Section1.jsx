@@ -16,7 +16,7 @@ export default function Section1() {
   const slides = [
     {
       img: img1,
-      title: "Yuqori sifat - eng zamonaviy ko'rinishda aks etadi!",
+      title: "Ishonch - soflik va nafislik.",
       desc: t("Bizning kompaniyamiz sifatli va ishonchli sanoat yechimlarini taklif qiladi."),
     },
     {
