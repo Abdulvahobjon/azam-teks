@@ -1,35 +1,42 @@
- import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay, Pagination } from "swiper";
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import img1 from "../assets/IMG_5277.JPG";
-import img2 from "../assets/IMG_5278.JPG";
-import img3 from "../assets/IMG_5279.JPG";
-import Boglanish from './Boglanish';
-import "./Section1.css";
+import { useTranslation } from "react-i18next"
+import { Link } from "react-router-dom"
+import { Autoplay, Navigation, Pagination } from "swiper"
+import { Swiper, SwiperSlide } from "swiper/react"
+
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+
+import img1 from "../assets/IMG_5277.JPG"
+import img2 from "../assets/IMG_5278.JPG"
+import img3 from "../assets/IMG_5279.JPG"
+
+import "./Section1.css"
+
 export default function Section1() {
   const { t } = useTranslation();
+
   const slides = [
-    {
-      img: img1,
-      title: "Ishonch - soflik va nafislik.",
-      desc: t("Bizning kompaniyamiz sifatli va ishonchli sanoat yechimlarini taklif qiladi."),
-    },
-    {
-      img: img2,
-      title: t("Yangi tekstil mahsulotlari"),
-      desc: t("Biz bilan sifat va ishonchni tanlang."),
-    },
-    {
-      img: img3,
-      title: t("Zamonaviy tekstil kompaniyalari"),
-      desc: t("Eng sifatli yechimlar siz uchun."),
-    },
-  ];
+  {
+    img: img1,
+    title: t("hero_title_1"),
+    desc: t("hero_desc_1"),
+    alt: "AZAM TEKS Textile Manufacturer",
+  },
+  {
+    img: img2,
+    title: t("hero_title_2"),
+    desc: t("hero_desc_2"),
+    alt: "100% Cotton Textile Products",
+  },
+  {
+    img: img3,
+    title: t("hero_title_3"),
+    desc: t("hero_desc_3"),
+    alt: "Textile Export from Uzbekistan",
+  },
+];
+
   return (
     <Swiper
       modules={[Navigation, Autoplay, Pagination]}
@@ -37,17 +44,30 @@ export default function Section1() {
       pagination={{ clickable: true }}
       autoplay={{ delay: 5000, disableOnInteraction: false }}
       loop
-      className="heroSwiper"
       speed={800}
+      className="heroSwiper"
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>
           <div className="slide">
-            <img src={slide.img} alt="banner" className="slide-img" loading="eager" />
+            <img
+              src={slide.img}
+              alt={slide.alt}
+              className="slide-img"
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "auto"}
+            />
+
             <div className="content">
-              <h2>{slide.title}</h2>
+              {index === 0 ? (
+                <h1>{slide.title}</h1>
+              ) : (
+                <h2>{slide.title}</h2>
+              )}
+
               <p>{slide.desc}</p>
-                                          <Link to="/boglanish" className="mobile-btn">
+
+              <Link to="/boglanish" className="mobile-btn">
                 {t("Bog'lanish")}
               </Link>
             </div>

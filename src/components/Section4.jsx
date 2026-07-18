@@ -145,7 +145,7 @@ function ServicesSection() {
       <h3 className='class'>{t("Eng yaxshi xizmatlar")}</h3>
       <div className="services-grid">
         {services.map((service, index) => (
-          <div className="service-card" key={index} onClick={()=> navigate(`/card/${service.id}`)} >
+          <div className="service-card" key={index} onClick={() => navigate(`/products/${service.id}`)}>
             <div className="card-inner" data-aos="zoom-in" data-aos-duration="2000">
               <img src={service.img[0]} alt={t(service.title)} />
               <h4>{t(service.title)}</h4>

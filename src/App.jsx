@@ -40,8 +40,8 @@ function App() {
         <Route path='/xarita' element={<Xarita/>}/>
         <Route path='/mijozlarfikri' element={<MijozlarFikri/>}/>
         <Route path='/topmahsulot' element={<Topmahsulot/>}/>
-        <Route path='/card/:id' element={<SingleCard/>}/>
-        <Route path='/card2/:id' element={<SingleCard2/>}/>
+<Route path="/products/:id" element={<SingleCard />} />
+<Route path="/fabric/:id" element={<SingleCard2 />} />
       </Routes>
       <ToastContainer
   position="top-right"
