@@ -9,6 +9,7 @@ import FactorySections from './FactorySections.jsx'
 import Made from './made.jsx'
 import Xarita from './Xarita.jsx'
 import Topmahsulot from './Topmahsulot.jsx'
+import Licences from './licences.jsx'
 export default function Boshsahifa(){
 	return(
 		<>
@@ -23,6 +24,7 @@ export default function Boshsahifa(){
 						<FactorySections/>
 						<Xarita/>
 						<Section7/>
+						<Licences/>
 		</>
 	)
 }

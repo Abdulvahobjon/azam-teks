@@ -7,7 +7,7 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 
-import img1 from "../assets/IMG_5277.JPG"
+import img1 from "../assets/diplom1.jpg"
 import img2 from "../assets/IMG_5278.JPG"
 import img3 from "../assets/IMG_5279.JPG"
 

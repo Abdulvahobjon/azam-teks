@@ -16,6 +16,8 @@ import { toast, ToastContainer } from 'react-toastify'
 import Made from './components/made.jsx'
 import Xarita from './components/Xarita.jsx'
 import Topmahsulot from './components/Topmahsulot.jsx'
+import Licences from './components/licences.jsx'
+
 Topmahsulot
 function App() {
   const location = useLocation();
@@ -40,6 +42,7 @@ function App() {
         <Route path='/xarita' element={<Xarita/>}/>
         <Route path='/mijozlarfikri' element={<MijozlarFikri/>}/>
         <Route path='/topmahsulot' element={<Topmahsulot/>}/>
+        <Route path='/licences' element={<Licences/>}/>
 <Route path="/products/:id" element={<SingleCard />} />
 <Route path="/fabric/:id" element={<SingleCard2 />} />
       </Routes>
