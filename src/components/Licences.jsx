@@ -35,10 +35,6 @@ export default function Licences() {
       <div className="licences-container">
         <div className="licences-header">
           <div className="licences-heading">
-            {/* <span className="licences-eyebrow">
-              <span className="licences-eyebrow-line" />
-              AZAM TEKS · RASMIY HUJJATLAR
-            </span> */}
 
             <h2>
               Sifat va ishonch
