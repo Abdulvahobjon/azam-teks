@@ -37,8 +37,7 @@ export default function Licences() {
           <div className="licences-heading">
 
             <h2>
-              Sifat va ishonch
-              <br />
+              Sifat va ishonch <br />
               <span>sertifikatlarimizda.</span>
             </h2>
 
