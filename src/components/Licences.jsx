@@ -35,11 +35,12 @@ export default function Licences() {
       <div className="licences-container">
         <div className="licences-header">
           <div className="licences-heading">
-
             <h2>
               Sifat va ishonch <br />
               <span>sertifikatlarimizda.</span>
             </h2>
+
+{/* <p></p> */}
 
             <p className="licences-description">
               Biz faoliyatimiz va mahsulotlarimiz sifatiga alohida
