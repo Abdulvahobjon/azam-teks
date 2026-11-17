@@ -40,8 +40,6 @@ export default function Licences() {
               <span>sertifikatlarimizda.</span>
             </h2>
 
-{/* <p></p> */}
-
             <p className="licences-description">
               Biz faoliyatimiz va mahsulotlarimiz sifatiga alohida
               e’tibor beramiz. Quyida kompaniyamiz sertifikatlari
