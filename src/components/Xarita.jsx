@@ -37,7 +37,6 @@ const Xarita = () => {
         </div>
 
         <div className="xarita-content">
-
           <h3 className="xarita-small-title">
             {t("Global Export")}
           </h3>
@@ -51,7 +50,6 @@ const Xarita = () => {
           </p>
 
           <div className="xarita-cards">
-
             <div className="xarita-card">
               <span>20+</span>
               <p>{t("Eksport davlatlari")}</p>
